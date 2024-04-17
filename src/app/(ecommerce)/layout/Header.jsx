@@ -20,7 +20,7 @@ const Header = () => {
          <ul className='d-flex gap-7 list-unstyled mb-0'>
             {NAV_LINKS.map((nav_link)=>{
                 return(
-                    <li key={nav_link.key} className='fs-5' ><Link href={nav_link.href} as={`${baseurl}/${nav_link.href}`}className='text-decoration-none '>{nav_link.label}</Link></li>
+                    <li key={nav_link.key} className='fs-5 font-normal' ><Link href={nav_link.href} as={`${baseurl}/${nav_link.href}`}className='text-decoration-none fw-normal'>{nav_link.label}</Link></li>
                 )
             })}
          </ul>

@@ -22,8 +22,13 @@
   }
 @font-face {
     font-family: 'Helvetica Neue';
-    src: url(../../../../public/fonts/HelveticaNeueUltraLight.otf);
+    src: url(../../../../public/fonts/HelveticaNeueLight.otf);
     font-weight: 300;
+  }
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../../../../public/fonts/HelveticaNeueUltraLight.otf);
+    font-weight: 200;
   }
   
   h1, p ,html,a {
