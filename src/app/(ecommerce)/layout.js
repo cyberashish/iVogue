@@ -1,6 +1,5 @@
 import Header from "./layout/Header"
 
-
  const WebLayout = ({children}) => {
     return(
         <>

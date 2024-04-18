@@ -26,13 +26,13 @@ $teal: #20c997 !default;
 $cyan: #539BFF !default;
 
 // Main Colors
-$primary: #004FF2 !default;
-$secondary: #49BEFF !default;
+$primary: #000090 !default;
+$secondary: #004FF2 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
+$light: #F8F9FA !default;
 $muted: #3C4043 !default;
 $dark: #123A3E !default;
 $dark-light: $gray-600 !default;
@@ -48,6 +48,14 @@ $light-success: #E6FFFA;
 $light-warning: #FEF5E5;
 $light-danger: #FBF2EF;
 $light-indigo: #EBF3FE;
+
+$primary-text-emphasis:   shade-color($primary, 60%);
+$secondary-text-emphasis: shade-color($secondary, 60%);
+$success-text-emphasis:   shade-color($success, 60%);
+$info-text-emphasis:      shade-color($info, 60%);
+$warning-text-emphasis:   shade-color($warning, 60%);
+$danger-text-emphasis:    shade-color($danger, 60%);
+$dark-text-emphasis:      #3C4043 ;
 
 
 // Theme Colorss
@@ -168,7 +176,7 @@ $border-radius-xl: 12px !default;
 // Style anchor elements.
 
 $link-color:                              #073BA8 !default;
-$link-hover-color:                        $primary;
+$link-hover-color:                        $secondary;
 $link-hover-decoration:                   null !default;
 
 
@@ -219,3 +227,6 @@ $navbar-dark-color: rgba($gray-300, 1) !default;
 $navbar-dark-hover-color: rgba($primary, 1) !default;
 
 $font-family-sans-serif: 'Helvetica Neue', sans-serif !default;
+$nav-pills-link-active-bg: rgba(255, 255, 255, 0) !default;
+
+

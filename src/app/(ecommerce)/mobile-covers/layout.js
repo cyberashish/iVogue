@@ -1,10 +1,13 @@
-import CoverHeader from "../layout/MobileCoverLayout/CoverHeader";
+import React from 'react'
+import CoverHeader from '../layout/MobileCoverLayout/CoverHeader'
 
-export default function CoversLayout({ children }) {
-    return(
-     <section>
-      <CoverHeader/>
-      {children}
-      </section>
-      )
-  }
+const MobileCoverLayout = ({children}) => {
+  return (
+       <>
+        <CoverHeader/>
+         {children}
+       </>
+  )
+}
+
+export default MobileCoverLayout

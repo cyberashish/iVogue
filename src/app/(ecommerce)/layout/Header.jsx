@@ -26,8 +26,8 @@ const Header = () => {
          </ul>
          <div className="d-flex gap-10">
          <form className='ps-2 border border-light-gray rounded-2 position-relative d-flex align-items-center '>
-         <Icon icon='bitcoin-icons:search-outline' className='text-gray fs-8' />
-         <input type="search" className="form-control ps-2 py-2 fw-light fs-4 border-0 shadow-none " id="exampleFormControlInput1" placeholder="Search for Products, brands and more..."/>
+         <Icon icon='bitcoin-icons:search-outline' className='text-gray fs-6' />
+         <input type="search" className="form-control ps-2 py-2 fw-light fs-2 border-0 shadow-none " id="exampleFormControlInput1" placeholder="Search for Products, brands and more..."/>
          </form>
          </div>
       </div>
