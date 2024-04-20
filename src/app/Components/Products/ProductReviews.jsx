@@ -43,7 +43,7 @@ const ProductReviews = () => {
                      <div className="align-self-center">
                      <button className='btn btn-primary rounded-0 align-self-center d-flex ps-3 pe-7 align-items-center border-0 border-indigo  border-3 border-bottom '>
                     <Icon icon='material-symbols-light:star' className='text-white fs-6' />
-                    <span className='fs-3 align-self-center position-relative' style={{top:"3px"}}>5</span>
+                    <span className='fs-3 align-self-center position-relative'>5</span>
                     </button>
                      </div>
                </div>
@@ -63,7 +63,7 @@ const ProductReviews = () => {
                      <div className="align-self-center">
                      <button className='btn btn-primary rounded-0 align-self-center d-flex ps-3 pe-7 align-items-center border-0 border-indigo  border-3 border-bottom '>
                     <Icon icon='material-symbols-light:star' className='text-white fs-6' />
-                    <span className='fs-3 align-self-center position-relative' style={{top:"3px"}}>5</span>
+                    <span className='fs-3 align-self-center position-relative'>5</span>
                     </button>
                      </div>
                </div>
