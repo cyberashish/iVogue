@@ -1,3 +1,4 @@
+import Footer from "./layout/Footer"
 import Header from "./layout/Header"
 
  const WebLayout = ({children}) => {
@@ -5,6 +6,7 @@ import Header from "./layout/Header"
         <>
         <Header/>
         {children}
+        <Footer/>
         </>
     )
  }

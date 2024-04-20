@@ -10,6 +10,8 @@ import phone_img from "/public/images/phone-cases.png";
 import MobileCoverCard from "@/app/Components/MobileCovers/MobileCoverCard";
 import { Covers_Cases } from "@/api/MobileCovers/mobile-covers";
 import CustomSkeleton from "@/app/Components/Skeleton/CustomSkeleton";
+import { Icon } from "@iconify/react";
+import CoverHeader from "../layout/MobileCoverLayout/CoverHeader";
 
 const initState = {
   allCase: "active",
@@ -76,8 +78,9 @@ const MobileCovers = () => {
   }, []);
 
   return (
-    <>
-      <div className="d-flex gap-4 justify-content-center mb-11">
+    <> 
+    <CoverHeader/>
+      <div className="d-flex gap-4 overflow-x-auto d-flex justify-content-md-center pb-md-11 pb-8">
         <div
           className={`d-flex flex-column gap-3 covertype ${state.allCase}`}
           onClick={() => {
@@ -86,7 +89,7 @@ const MobileCovers = () => {
           }}
         >
           <div
-            className={`d-flex justify-content-center align-items-center  bg-secondary fs-4`}
+            className={`d-flex justify-content-center align-items-center  bg-indigo fs-4`}
             style={{ width: "140px", height: "70px" }}
           >
             <span className="text-center text-base fs-4 text-white">All</span>
@@ -151,6 +154,20 @@ const MobileCovers = () => {
           )}
         </div>
       </div>
+       <ul className="d-flex gap-13 list-unstyled d-flex justify-content-center mt-14">
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn p-0 btn-outline-dark-emphasis fs-5">
+            <Icon icon='fluent:chevron-left-28-regular' className=" fs-8" />
+          </li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn btn-dark-emphasis fs-5">1</li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn btn-outline-dark-emphasis fs-5">2</li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn btn-outline-dark-emphasis fs-5">3</li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn btn-outline-dark-emphasis fs-5">4</li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center  fs-5">...</li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn btn-outline-dark-emphasis fs-5">5</li>
+          <li className="round-42 border-2 d-flex justify-content-center align-items-center btn p-0 btn-outline-dark-emphasis fs-5">
+            <Icon icon='fluent:chevron-right-28-regular' className=" fs-8" />
+          </li>
+       </ul>
     </>
   );
 };
