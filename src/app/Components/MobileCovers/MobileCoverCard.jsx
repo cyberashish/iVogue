@@ -2,21 +2,21 @@
 "use client"
 
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
 const MobileCoverCard = ({title,category,price,discountedPrice,thumbnail,image,discount}) => {
+  const router = useRouter();
     const [frontimg,setFrontimg]=useState("");
     const [backimg,setBackimg]=useState("d-none");
   return (
     <>
-      <div className="col-xxl-3 col-xl-4 c col-lg-6">
+      
+      <div className="col-xxl-3 col-xl-4 c col-lg-6" onClick={() => {router.push("/mobile-covers/red")}}>
         <div className="bg-light py-3 px-13">
         <div
           className="group-img position-relative"
           style={{ cursor: "pointer" , height:"430px"  , width:"100%"}}
-          onClick={() => {
-            alert("Jai Shree ram");
-          }}
           onMouseOver={() => {
             setFrontimg("opacity-0");
             setBackimg("opactiy-100");

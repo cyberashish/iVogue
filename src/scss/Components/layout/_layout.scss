@@ -24,8 +24,8 @@
   height: 42px;
 }
 .round-25{
-  width: 5px;
-  height: 5px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
 .round-35{
@@ -111,12 +111,15 @@ border-radius: 50%;
 opacity: 0.8;
 color: black;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border: 7px solid white;
 }
 .accessories .slick-prev{
-  left: -50px;
+  left: -40px !important;
+  z-index: 20;
 }
 .accessories .slick-next{
-  right: -50px;
+  right: -40px !important;
+  z-index: 20;
 }
 
 .accessories .slick-arrow.slick-next,
@@ -124,6 +127,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 {
   &:hover{
     background-color: #2574f5;
+    border-color: #2574f5;
     opacity:1;
     &::after{
      color: white !important;
@@ -139,11 +143,18 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
 .accessories .slick-prev::before,.accessories .slick-next::before{
-  font-family: none !important;
-  opacity: 1 !important;
-  color: black !important;
-  font-size: 30px !important;
+  font-family: slick !important;
+  opacity: 0 !important;
     }
+.accessories .slick-arrow.slick-prev {
+  left: 0;
+  background: url("https://img.icons8.com/ios/50/000000/long-arrow-left.png") 0
+    0 / 100% no-repeat;
+}
+.accessories .slick-arrow.slick-next {
+  right: 0;
+  background: url("https://img.icons8.com/ios/50/000000/long-arrow-right.png") 0 0 / 100% no-repeat;
+}
 
 .accessories .arrows{
 height:20px;

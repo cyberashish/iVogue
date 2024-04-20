@@ -9,7 +9,7 @@ const ProductFeatureCard = ({image,title,description}) => {
           <h3 className="text-subtle-dark fs-6 fw-bold letter mb-1 ">
             {title}
           </h3>
-          <p className="mb-0 text-gray-emphasis fw-normal letter fs-4 lh-sm">
+          <p className="mb-0 text-gray-emphasis fw-normal letter fs-56 lh-sm">
            {description}
           </p>
         </div>
