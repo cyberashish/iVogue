@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
-const Product = ({shareIcon,image,heartIcon}) => {
+const ProductPreviewCard = ({shareIcon,image,heartIcon}) => {
   return (
     <>
       <div className="bg-light-primary pt-9 pb-11 position-relative ">
@@ -24,4 +24,4 @@ const Product = ({shareIcon,image,heartIcon}) => {
   );
 };
 
-export default Product;
+export default ProductPreviewCard;
