@@ -105,6 +105,8 @@ $spacers: (
   52:120px,
   53:72px,
   54:36px,
+  55:14px,
+  56:211px,
   ) !default;
 
   // Font Sizes
@@ -128,6 +130,7 @@ $font-sizes: (
   54:38px,
   55:28px,
   56:15px,
+  80:80px,
   ) !default;
 $font-size-base: 0.875rem !default;
 
@@ -178,7 +181,7 @@ $body-color: #5A6A85 !default;
 
 // Heading
 $headings-color: $dark !default;
-$headings-font-weight: 500 !default;
+$headings-font-weight: 700 !default;
 
 // Border Color
 $border-color: #ebf1f6 !default;

@@ -1,11 +1,12 @@
+
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
-import accessory from "/public/images/homepage/accessories.png"
-import AccessoriesCard from "./Cards/AccessoriesCard";
+import mobile_image from "/public/images/homepage/mobile.png"
+import CommonProductCard from "./Cards/CommonProductCard";
 
-const Accessories = () => {
+const NewProducts = () => {
     const settings = {
         dots: false,
         infinite: true,
@@ -42,27 +43,25 @@ const Accessories = () => {
   return (
     <>
       <div className="container">
-        <div className="d-flex mb-53 gap-1 justify-content-center align-items-center">
-          <h1 className="fs-8 text-dark text-text-capitalize  text-center fw-bold mb-0">
-            Add On Accessory: Phone Utility Lanyard
-          </h1>
-          <Icon icon="ep:info-filled" className="text-subtle-dark fs-5" />
+        <div className="d-flex mb-8 gap-1 justify-content-center align-items-center">
+          <h2 className="fs-8 text-dark  text-center fw-bold mb-0">
+            Recently Viewed
+          </h2>
         </div>
         {/* Slider */}
         <div className="slider-container accessories mb-53">
-      <Slider {...settings}>
-        <AccessoriesCard image={accessory} price={1199} />
-        <AccessoriesCard image={accessory} price={1199} />
-        <AccessoriesCard image={accessory} price={1199} />
-        <AccessoriesCard image={accessory} price={1199} />
-        <AccessoriesCard image={accessory} price={1199} />
-        <AccessoriesCard image={accessory} price={1199} />
-        <AccessoriesCard image={accessory} price={1199} />
-      </Slider>
-    </div>
+          <Slider {...settings}>
+            <CommonProductCard image={mobile_image} />
+            <CommonProductCard image={mobile_image} />
+            <CommonProductCard image={mobile_image} />
+            <CommonProductCard image={mobile_image} />
+            <CommonProductCard image={mobile_image} />
+            <CommonProductCard image={mobile_image} />
+          </Slider>
+        </div>
       </div>
     </>
   );
 };
 
-export default Accessories;
+export default NewProducts;

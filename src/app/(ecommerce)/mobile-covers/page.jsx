@@ -12,6 +12,8 @@ import { Covers_Cases } from "@/api/MobileCovers/mobile-covers";
 import CustomSkeleton from "@/app/Components/Skeleton/CustomSkeleton";
 import { Icon } from "@iconify/react";
 import CoverHeader from "../layout/MobileCoverLayout/CoverHeader";
+import Footer from "../layout/Footer";
+import Newsletter from "@/app/Components/HeroSection/Newsletter";
 
 const initState = {
   allCase: "active",
@@ -154,7 +156,7 @@ const MobileCovers = () => {
           )}
         </div>
       </div>
-       <ul className="d-flex gap-13 list-unstyled d-flex justify-content-center mt-14">
+       <ul className="d-flex gap-13 list-unstyled d-flex justify-content-center mt-14 mb-14">
           <li className="round-42 border-2 d-flex justify-content-center align-items-center btn p-0 btn-outline-dark-emphasis fs-5">
             <Icon icon='fluent:chevron-left-28-regular' className=" fs-8" />
           </li>
@@ -168,6 +170,9 @@ const MobileCovers = () => {
             <Icon icon='fluent:chevron-right-28-regular' className=" fs-8" />
           </li>
        </ul>
+       <div className="mb-52">
+       <Newsletter/>
+       </div>
     </>
   );
 };

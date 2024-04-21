@@ -17,7 +17,7 @@ const FeaturedProduct = ({image,title,price,discountedPrice,discount}) => {
             <p className="text-dark-gray  mb-0 fs-5 text-decoration-line-through ">{price}</p>
             <span className="text-indigo fs-5">{`Save rs.${discount}`}</span>
           </div>
-          <button className="btn btn-outline-indigo px-8 mt-2 py-3 lh-1 fs-3 border-2  w-100 fw-normal">
+          <button className="btn btn-outline-indigo px-8 mt-2 py-55 lh-1 fs-3 border-2  w-100 fw-normal">
             Inquire Now
           </button>
         </div>

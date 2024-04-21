@@ -13,7 +13,7 @@ const Footer = () => {
   }, [])
   return (
     <>
-      <div className='py-12 bg-indigo'>
+      <div className='py-12 bg-indigo mt-12'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-4 col-12'>

@@ -7,7 +7,7 @@ import feature4 from "/public/images/product-features/feature4.png"
 import feature5 from "/public/images/product-features/feature5.png"
 import feature6 from "/public/images/product-features/feature6.png"
 import featurethumbnail from "/public/images/product-features/feature-thumbnail.png"
-import ProductFeatureCard from './ProductFeatureCard'
+import ProductFeatureCard from './Cards/ProductFeatureCard'
 
 const ProductFeatures = () => {
   return (
