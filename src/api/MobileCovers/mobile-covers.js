@@ -97,3 +97,34 @@ export const Covers_Cases = [
     image: phonegroup2,
   },
 ];
+
+export const FILTER_BRAND = [
+  {key:"brand01",brand:"Apple",quantity:34},
+  {key:"brand02",brand:"Apple",quantity:183},
+  {key:"brand03",brand:"One Plus",quantity:115},
+  {key:"brand04",brand:"Motorola",quantity:62},
+  {key:"brand05",brand:"One Plus",quantity:107},
+  {key:"brand06",brand:"Apple",quantity:40},
+  {key:"brand07",brand:"One Plus",quantity:237},
+  {key:"brand08",brand:"Samsung",quantity:34},
+  {key:"brand09",brand:"One Plus",quantity:63},
+  {key:"brand10",brand:"Apple",quantity:94},
+  {key:"brand11",brand:"One Plus",quantity:194},
+  {key:"brand12",brand:"Apple",quantity:44},
+  {key:"brand13",brand:"One Plus",quantity:14},
+]
+
+export const FILTER_MODEL = [
+  {key:"model01",model:"iphone 15 pro max",quantity:34},
+  {key:"model02",model:"iphone 14 pro max",quantity:183},
+  {key:"model03",model:"iphone 15 pro max",quantity:115},
+  {key:"model04",model:"iphone 15 pro max",quantity:62},
+  {key:"model05",model:"iphone 15 pro max",quantity:107},
+  {key:"model06",model:"iphone 15 pro max",quantity:40},
+  {key:"model07",model:"iphone 15 pro max",quantity:237},
+  {key:"model08",model:"iphone 15 pro max",quantity:34},
+  {key:"model09",model:"iphone 15 pro max",quantity:63},
+  {key:"model10",model:"iphone 15 pro max",quantity:94},
+  {key:"model11",model:"iphone 15 pro max",quantity:194},
+  {key:"model12",model:"iphone 15 pro max",quantity:44},
+]

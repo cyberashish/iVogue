@@ -44,7 +44,7 @@ $gray:#F8F9FA !default;
 $lightpink:$gray-500 !default;
 
 // light colors
-$light-primary: #E0EAFD;
+$light-primary: #F1F6FF;
 $light-secondary: #E8F7FF;
 $light-info: #EBF3FE;
 $light-success: #E6FFFA;
@@ -55,7 +55,13 @@ $dark-emphasis:#1E1E1E;
 $lightgray-emphasis:#8B8B8B;
 $gray-emphasis:#595955;
 $subtle-dark:#161616;
-
+$light-emphasis:#EDE8E1;
+$gray-variant:#959086;
+$grayscale-variant:#8D877E;
+$lightscale-variant:#4D4D4D;
+$darkscale-variant:#424553;
+$grayextra:#94969F;
+$lightextra:#E0EAFD;
 
 // Theme Colorss
 $theme-colors: (
@@ -81,6 +87,13 @@ $theme-colors: (
   "gray-emphasis":$gray-emphasis,
    "subtle-dark":$subtle-dark,
    "dark-light":$dark-light,
+   "light-emphasis":$light-emphasis,
+   'gray-variant':$gray-variant,
+   'grayscale-variant':$grayscale-variant,
+   'lightscale-variant':$lightscale-variant,
+   'darkscale-variant':$darkscale-variant,
+    'grayextra':$grayextra,
+    'lightextra':$lightextra,
   ) !default;
 
 // Spacer
@@ -107,6 +120,11 @@ $spacers: (
   54:36px,
   55:14px,
   56:211px,
+  57:55px,
+  58:6px,
+  59:2px,
+  60:11px,
+  61:92px,
   ) !default;
 
   // Font Sizes

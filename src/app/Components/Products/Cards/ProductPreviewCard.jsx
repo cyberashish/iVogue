@@ -1,9 +1,16 @@
-
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import product_image from "/public/images/homepage/product.png";
+import { useState } from "react";
+import NextJsImage from "@/app/plugin/NextJsImage";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-const ProductPreviewCard = ({shareIcon,image,heartIcon}) => {
+const ProductPreviewCard = ({ shareIcon, image, heartIcon }) => {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <div className="bg-light-primary pt-9 pb-11 position-relative ">
@@ -19,7 +26,21 @@ const ProductPreviewCard = ({shareIcon,image,heartIcon}) => {
             <Icon icon={heartIcon} className="text-dark fs-52" />
           </Link>
         </div>
+        <div
+          className="zoom position-absolute pointer"
+          onClick={() => setOpen(true)}
+          style={{ bottom: "45px", right: "45px" }}
+        >
+          <Icon icon="ic:baseline-fullscreen" className="text-dark fs-9" />
+        </div>
       </div>
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={[product_image, product_image, product_image]}
+        render={{ slide: NextJsImage }}
+        plugins={[Thumbnails]}
+      />
     </>
   );
 };

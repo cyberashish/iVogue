@@ -12,7 +12,7 @@ const MobileCoverCard = ({title,category,price,discountedPrice,thumbnail,image,d
   return (
     <>
       
-      <div className="col-xxl-3 col-xl-4  col-lg-6" onClick={() => {router.push("/mobile-covers/red")}}>
+      <div className="col-xl-4  col-lg-6" onClick={() => {router.push("/mobile-covers/red")}}>
         <div className="bg-light py-3 px-13">
         <div
           className="group-img position-relative"
