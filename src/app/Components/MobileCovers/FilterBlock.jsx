@@ -1,4 +1,4 @@
-import { FILTER_BRAND, FILTER_MODEL } from "@/api/MobileCovers/mobile-covers";
+import { FILTER_BRAND, FILTER_MODEL } from "@/api/Products/products";
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import FilterBrand from "./FilterBrand";
@@ -18,7 +18,7 @@ const FilterBlock = () => {
     <div className="d-flex flex-column gap-55">
       <h4 className="fs-22 fw-bold text-black">Price</h4>
        <div className="d-flex flex-column gap-55">
-       <input type="range" min="1" onChange={(e) =>{setSlider(e.target.value)}} max="100" value={slider} class="slider" id="myRange"/>
+       <input type="range" min="1" onChange={(e) =>{setSlider(e.target.value)}} max="100" value={slider} className="slider" id="myRange"/>
       <div className="d-flex gap-2">
         <span className="fs-4 fw-normal text-black">Rs01</span>
         <span className="fs-4 fw-normal text-black">To</span>

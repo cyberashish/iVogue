@@ -19,7 +19,6 @@ const Accessories = () => {
               slidesToShow: 3,
               slidesToScroll: 3,
               infinite: true,
-              dots: true
             }
           },
           {
@@ -28,7 +27,6 @@ const Accessories = () => {
               slidesToShow: 2,
               slidesToScroll: 2,
               infinite: true,
-              dots: true
             }
           },
             {
@@ -41,6 +39,7 @@ const Accessories = () => {
             },
             {
               breakpoint: 480,
+              arrows:false,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -58,7 +57,7 @@ const Accessories = () => {
           <Icon icon="ep:info-filled" className="text-subtle-dark fs-5" />
         </div>
         {/* Slider */}
-        <div className="slider-container accessories mb-53">
+        <div className="slider-container accessories">
       <Slider {...settings}>
         <AccessoriesCard image={accessory} price={1199} />
         <AccessoriesCard image={accessory} price={1199} />

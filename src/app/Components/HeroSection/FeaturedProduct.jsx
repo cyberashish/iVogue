@@ -1,14 +1,15 @@
+"use client"
 import React from "react";
 import Image from 'next/image'
 const FeaturedProduct = ({image,title,price,discountedPrice,discount}) => {
   return (
     <>
-      <div className="col-md-3">
+      <div className="p-6">
         <div className="productbox bg-gray p-3 position-relative">
-          <div className="badge bg-primary-subtle rounded-0 text-dark fw-normal fs-4 px-3">
+          <div className="badge position-absolute bg-primary-subtle rounded-0 text-dark fw-normal fs-4 px-3">
             New
           </div>
-          <div className="text-center">
+          <div className="text-center hover-img overflow-hidden">
             <Image src={image} alt="img" className="img-fluid" />
           </div>
           <h5 className="text-dark-gray fs-6 mb-6">{title}</h5>

@@ -12,15 +12,15 @@ const ExpressCheckout = () => {
               </h3>
               <form action="">
                 <div className="row">
-                  <div class="col-lg-8 mt-57">
+                  <div className="col-lg-8 mt-57">
                     <input
                       type="email"
-                      class="form-control fs-3"
+                      className="form-control fs-4 input-indication"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder="Email Address"
                     />
-                    <div id="emailHelp" class="form-text fs-4 text-black">
+                    <div id="emailHelp" className="form-text fs-4 text-black">
                       You can create an account after checkout.
                     </div>
                   </div>
@@ -33,7 +33,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputfirstname1"
                         aria-describedby="firstnameHelp"
                         placeholder="First Name*"
@@ -42,7 +42,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputlastname1"
                         placeholder="Last Name*"
                       />
@@ -50,7 +50,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputnumber1"
                         placeholder="Number*"
                       />
@@ -58,7 +58,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputcompany"
                         placeholder="Company"
                       />
@@ -66,7 +66,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputaddress"
                         placeholder="Street address line 1*"
                       />
@@ -74,14 +74,14 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputaddress2"
                         placeholder="Street address line 2*"
                       />
                     </div>
                     <div className="col-6">
                       <select
-                        class="form-select text-black"
+                        className="form-select text-black"
                         aria-label="Default select example"
                       >
                         <option>Country*</option>
@@ -93,7 +93,7 @@ const ExpressCheckout = () => {
                     </div>
                     <div className="col-6">
                       <select
-                        class="form-select text-black"
+                        className="form-select text-black"
                         aria-label="Default select example"
                       >
                         <option>State/Province *</option>
@@ -106,7 +106,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="text"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputcity"
                         placeholder="City*"
                       />
@@ -114,7 +114,7 @@ const ExpressCheckout = () => {
                     <div className="col-6">
                       <input
                         type="number"
-                        class="form-control fs-3"
+                        className="form-control fs-4 input-indication"
                         id="Inputcode"
                         placeholder="Zip/Postal Code*"
                       />

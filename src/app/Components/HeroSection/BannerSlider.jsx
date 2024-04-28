@@ -3,16 +3,28 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BannersliderData } from '@/api/homepage/homepage'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const BannerSlide = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        autoplay:false,
+        slidesToShow: 1,
+        slidesToScroll: 1, 
+    }
     return (
         <>
-            <div className='container py-8'>
-                <div className='row'>
+            <div className='container py-8 px-0'>
+            <div className="slider-container banner-slider">
+                    <Slider {...settings}>
                     {BannersliderData.map((bannerslider) => {
                         return (
-                            <div className='col-12' key={bannerslider.key}>
-                                <Link href={bannerslider.url}  >
-                                    <div className='position-relative banner-slider hover-img overflow-hidden'>
+                            <div key={bannerslider.key}>
+                                
+                                    <div className='position-relative  hover-img overflow-hidden'>
                                         <Image
                                             src={bannerslider.img}
                                             alt="img"
@@ -22,20 +34,21 @@ const BannerSlide = () => {
                                         />
                                         <div className='position-absolute banner-text'>
                                             <p className='text-white fs-6 fw-bold pb-2'>{bannerslider.subtitle}</p>
-                                            <h5 className='text-white fs-9 fw-medium pb-2'>{bannerslider.title}</h5>
+                                            <h5 className='text-white fs-9 fw-bold pb-2'>{bannerslider.title}</h5>
                                             <div className='d-flex align-baseline lh-lg pb-3'>
                                                 <span className='fs-5 fw-normal fw-normal text-white'>RS</span>
-                                                <h2 className='text-white fs-80 fw-medium  mb-0'>{bannerslider.price}</h2>
+                                                <h2 className='text-white fs-80 fw-bold mb-0'>{bannerslider.price}</h2>
                                             </div>
-
-                                            <button className="btn btn-primary px-10 py-2 mt-3">Shop now</button>
+                                            <Link className="btn btn-primary px-10 py-2 mt-2" href={bannerslider.url} >Shop now
+                                                </Link>  
+                                        
                                         </div>
                                     </div>
-                                </Link>
+                               
                             </div>
                         )
                     })}
-
+                   </Slider>
                 </div>
             </div>
 

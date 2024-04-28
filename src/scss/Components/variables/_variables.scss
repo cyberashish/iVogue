@@ -62,6 +62,7 @@ $lightscale-variant:#4D4D4D;
 $darkscale-variant:#424553;
 $grayextra:#94969F;
 $lightextra:#E0EAFD;
+$darkextra:#B7C0D2;
 
 // Theme Colorss
 $theme-colors: (
@@ -94,6 +95,7 @@ $theme-colors: (
    'darkscale-variant':$darkscale-variant,
     'grayextra':$grayextra,
     'lightextra':$lightextra,
+    'darkextra':$darkextra,
   ) !default;
 
 // Spacer
@@ -125,6 +127,7 @@ $spacers: (
   59:2px,
   60:11px,
   61:92px,
+  63:15px,
   ) !default;
 
   // Font Sizes
@@ -273,6 +276,10 @@ $dropdown-box-shadow: rgb(145 158 171 / 20%) 0px 0px 2px 0px,
 
 // Modal
 $modal-content-border-width: 0 !default;
+$modal-lg:650px !default;
+
+//modal offcanvas
+$offcanvas-horizontal-width: 350px !default;
 
 // navbar
 $navbar-light-color: rgba($gray-600, 1) !default;

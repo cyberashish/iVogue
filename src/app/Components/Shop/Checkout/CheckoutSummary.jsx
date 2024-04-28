@@ -1,36 +1,39 @@
 import { Icon } from "@iconify/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import product_image from "/public/images/shop/product_cart.png";
 import Image from "next/image";
+import OrderCard from "./OrderCard";
+import { useProduct } from "@/store/CartProvider/CartData";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const CheckoutSummary = () => {
     const [discount , setDiscount] = useState("Apply Discount");
+    const productContext = useProduct();
+      
+      const filteredCart = productContext.cartvalue.map((prod)=>{
+           return (productContext.value.find((item)=>{
+             return item.key===prod
+           }))
+      });
+      
+      const totalPrice = filteredCart.reduce((accum,item)=>{
+        return(accum=accum+(item.quantity*item.discountedPrice))
+      },0);
+
+     const handleOrder = () => {
+      toast.success("Order placed!");
+     }
+
   return (
     <>
             <div className="col-lg-6 pe-0">
               <h3 className="text-uppercase fs-8 fw-bold mt-8">
                 Order Summary
               </h3>
-              <div className="d-flex justify-content-between align-items-center my-8">
-                <div className="d-flex align-items-center gap-3 text-nowrap">
-                  <div className="bg-light-emphasis">
-                    <Image
-                      src={product_image}
-                      alt="image"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="d-flex flex-column gap-0">
-                    <p className="mb-0 fs-6 fw-bold text-black text-uppercase">
-                      Cover For iPhone 15
-                    </p>
-                    <div className="d-flex gap-1">
-                      <span className="fs-4 text-black">QTY :</span>
-                      <span className="fs-4 text-black">1</span>
-                    </div>
-                  </div>
-                </div>
-                <span className="fs-6 fw-bold text-black">Rs.1099</span>
-              </div>
+             {filteredCart.length===0?null:filteredCart.map((prod)=>{
+              return <OrderCard image={prod.thumbnail} discountedPrice={prod.discountedPrice} quantity={prod.quantity} title={prod.title} type={prod.mastercat} />
+             })}
               <div className="row">
                 <div className="col-lg-8 h-100">
                   <input
@@ -60,7 +63,7 @@ const CheckoutSummary = () => {
               <div className="d-flex flex-column gap-8">
                 <div className="d-flex justify-content-between ">
                   <span className="fs-22 fw-normal text-black">Cart Subtotal</span>
-                  <span className="fs-22 fw-normal text-black">1099</span>
+                  <span className="fs-22 fw-normal text-black">{totalPrice}</span>
                 </div>
                 <div className="d-flex justify-content-between ">
                   <div className="d-flex flex-column ">
@@ -71,9 +74,12 @@ const CheckoutSummary = () => {
                 </div>
                 <div className="d-flex justify-content-between ">
                   <span className="fs-55 fw-bold text-black">Order Total</span>
-                  <span className="fs-55 fw-bold text-black">RS1099</span>
+                  <span className="fs-55 fw-bold text-black">{`RS${totalPrice}`}</span>
                 </div>
-                <button className="btn btn-primary rounded-0 fs-5 fw-normal">Place Order</button>
+                 <div>
+                 <button className="btn btn-primary py-6 rounded-0 fs-5 fw-normal w-100" onClick={handleOrder}>Place Order</button>
+                 <ToastContainer />
+                 </div>
               </div>
             </div>      
     </>

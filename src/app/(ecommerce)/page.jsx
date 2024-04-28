@@ -7,6 +7,8 @@ import Instafeed from "../Components/HeroSection/InstaFeed";
 import LatestBlog from "../Components/HeroSection/LatestBlog";
 import Newsletter from "../Components/HeroSection/Newsletter";
 import WhyBuy from "../Components/HeroSection/Whybuy";
+import ImageWithText from "../Components/HeroSection/ImageWithText";
+import ExploreRange from "../Components/HeroSection/ExploreRange";
 
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
      <main>
       <Banner/>
       <PopularProducts/>
+      <ImageWithText/>
+      <ExploreRange/>
       <BannerSlide/>
       <FeatureCollections/>
       <Instafeed/>
