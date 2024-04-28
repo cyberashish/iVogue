@@ -1,14 +1,14 @@
 
 
 
-  .covertype.active{
-    border-width: 0px 0px 3px 0px !important;
-    border-style: solid !important;
-    border-color: #000090 !important;
-    border-radius: 8px;
-  }
+
   .covertype{
     cursor: pointer;
+    &.active{
+      p{
+        color: var(--bs-primary) !important;
+      }
+    }
   }
   .chat-icon{
     bottom: 15px;
@@ -333,5 +333,67 @@ margin: 1px;
     width: 100%;
     justify-content: space-between;
     border-width: 2px 2px 0px 2px;
+  }
+}
+
+//product-filter-page
+
+.filter-brand,.filter-model{
+  &.collapsed{
+    .filter-brand-icon{
+      transform: rotate(0deg);
+    }
+    .filter-model-icon{
+      transform: rotate(0deg);
+    }
+  }
+  .filter-brand-icon{
+    transform: rotate(90deg);
+    transition: all 0.1s ease-in-out;
+  }
+  .filter-model-icon{
+    transform: rotate(90deg);
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.sort-dropdown{
+  .sort-icon{
+    transition: all 0.1s ease-in-out;
+  }
+  &.show{
+    .sort-icon{
+      transform: rotate(90deg);
+    }
+  }
+  &::after{
+    display: none !important;
+  }
+}
+
+
+//cart-offcanvas
+.cart-offcanvas{
+  width: 500px !important;
+}
+
+//footer links
+.footer-links li a:hover {
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+  color: yellow !important;
+}
+
+//shopping-cart
+
+.shop-cart-scroll{
+  @media only screen and (max-width:991px){
+    overflow: auto;
+  }
+  .shop-cart-items{
+    @media only screen and (max-width:991px){
+      min-width: 700px;
+    }
+   
   }
 }

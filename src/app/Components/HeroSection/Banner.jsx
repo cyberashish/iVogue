@@ -1,8 +1,18 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import Image from 'next/image'
-import img1 from "../../../../public/images/homepage/mobile.png";
+import img1 from "/public/images/homepage/mobile.png";
+// import WOW from 'wowjs';
+// import 'wowjs/css/libs/animate.css';
 
 const Banner = () => {
+  // useEffect(() => {
+  //   const wow = new WOW.WOW({live: false});
+  //   wow.init({
+  //     duration: 1000
+  //   });
+    
+  // }, []);
   return (
     <>
      <div className='bg-primary-subtle pt-9'>

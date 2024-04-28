@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { Icon } from '@iconify/react'
 import { usePathname } from 'next/navigation'
 import { useProduct } from '@/store/CartProvider/CartData'
+import CartCanvas from '@/app/Components/HeroSection/CartCanvas'
 
 const Header = () => {
   const [baseurl, setbaseurl] = useState();
@@ -38,17 +39,19 @@ const Header = () => {
             </form>
             <div className="d-flex gap-7">
             <Link href="/" className='text-black hover-link'><Icon icon="tabler:user" fontSize={25} /></Link>
-              <Link href='#' className='text-black hover-link position-relative'>
+              <span className='text-black hover-link position-relative' data-bs-toggle="offcanvas" href="#Cartoffcanvas" role="button" aria-controls="Cartoffcanvas">
               <Icon icon="tabler:shopping-cart" fontSize={25} />
                 {items===0?null:<span className="position-absolute top-0 start-100 translate-middle badge rounded-circle  bg-black">
                 {items}
               </span>}
-              </Link>
+              </span>
             </div>
           </div>
         </div>
       </div>
       </div>
+            {/* Call Cart Canvas From right side */}
+            <CartCanvas/>
     </>
   )
 }
