@@ -6,7 +6,7 @@ import Image from "next/image";
 const TemperedHeader = () => {
   return (
     <>
-      <div className="wrapper bg-light-primary mt-4">
+      <div className="wrapper bg-light-primary">
         <div className="container py-2 d-flex justify-start">
           <Image src={summerSale} alt="summer-image" />
         </div>

@@ -7,16 +7,20 @@ import { NAV_LINKS } from '@/api/navigation/navigation'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 import { usePathname } from 'next/navigation'
+import { useProduct } from '@/store/CartProvider/CartData'
 
 const Header = () => {
   const [baseurl, setbaseurl] = useState();
   const pathname = usePathname();
+  const productContext = useProduct();
+  const items = productContext.cartvalue.length;
   useEffect(() => {
     const url = window.location.origin;
     setbaseurl(url);
   }, [])
   return (
     <>
+    <div className="border-bottom border-2">
       <div className="container">
         <div className=' bg-white d-flex justify-content-between align-items-center py-3'>
           <Link href={'/'}><Image src={logo} alt='image' /></Link>
@@ -36,13 +40,14 @@ const Header = () => {
             <Link href="/" className='text-black hover-link'><Icon icon="tabler:user" fontSize={25} /></Link>
               <Link href='#' className='text-black hover-link position-relative'>
               <Icon icon="tabler:shopping-cart" fontSize={25} />
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-circle  bg-black">
-                1
-              </span>
+                {items===0?null:<span className="position-absolute top-0 start-100 translate-middle badge rounded-circle  bg-black">
+                {items}
+              </span>}
               </Link>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )

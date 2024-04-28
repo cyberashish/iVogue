@@ -16,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SelectedProduct = ({data}) => {
 
-  const notify = () => toast("Wow so easy!");
   
     const router = useRouter();
     const [nav1, setNav1] = useState(null);
@@ -72,7 +71,7 @@ const SelectedProduct = ({data}) => {
     }, []);
     return (
       <>
-      <div className="container">
+      <div className="container mt-10">
       <div className="slider-container product-slider">
         <div className="row gy-4">
           <div className="col-lg-6">

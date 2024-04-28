@@ -21,10 +21,10 @@ const ProductDetail = () => {
     <Accessories/>
     <ProductFeatures/>
     <ProductReviews/>
-    {/* <RecentProducts/>
+    <RecentProducts/>
     <NewProducts/>
     <BestSellers/>
-    <LikedProducts/> */}
+    <LikedProducts/>
     <Newsletter/>
     </>
   );
