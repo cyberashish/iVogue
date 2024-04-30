@@ -94,10 +94,25 @@
         opacity: 1;
       }
 }
-
-
-
-
-body {
+body,html {
     overflow-x: hidden;
+}
+
+// Responsive css
+
+@media screen and (max-width:1199px){
+    #menucanvasExample{
+        max-width: 300px;
+        ul{
+            li{
+                a{
+                    color: $white;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    #Cartoffcanvas{
+        max-width:100%;
+    }
 }

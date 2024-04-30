@@ -147,7 +147,7 @@ const TemperedGlass = () => {
               <Link data-bs-toggle="offcanvas" href="#offcanvasExample" className="d-xl-none d-block"> 
               <Icon icon='mage:filter' className="text-black fs-9" />
               </Link>
-              <div class="dropdown sort-parent-dropdown">
+              <div className="dropdown sort-parent-dropdown">
                 <button
                   className="d-flex justify-content-between gap-51 py-lg-2 py-58 px-51 border border-2 border-subtle-dark pointer dropdown-toggle bg-white position-relative sort-dropdown"
                   data-bs-toggle="dropdown"
@@ -161,19 +161,19 @@ const TemperedGlass = () => {
                     className="fs-53 text-black sort-icon"
                   />
                 </button>
-                <ul class="dropdown-menu top-0 w-100">
+                <ul className="dropdown-menu top-0 w-100">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </li>

@@ -1,7 +1,9 @@
 
 
 
-
+.container{
+  max-width: 1400px !important;
+}
   .covertype{
     cursor: pointer;
     &.active{
@@ -38,10 +40,7 @@
   background-color: #92711C;
 }
 
-// Carousel
-// .thumbSlider .slick-current > .active-slide{
-//   background-color: rgb(175, 175, 255);
-// }
+
 .thumbSlider{
   .slick-current{
     .active-slide{
@@ -165,12 +164,12 @@ border: 7px solid white;
   opacity: 0 !important;
     }
 .accessories .slick-arrow.slick-prev {
-  left: 0;
+  left: 0 !important;
   background: url("https://img.icons8.com/ios/50/000000/long-arrow-left.png") 0
     0 / 100% no-repeat;
 }
 .accessories .slick-arrow.slick-next {
-  right: 0;
+  right: 0 !important;
   background: url("https://img.icons8.com/ios/50/000000/long-arrow-right.png") 0 0 / 100% no-repeat;
 }
 
@@ -378,10 +377,22 @@ margin: 1px;
 }
 
 //footer links
-.footer-links li a:hover {
-  margin-left: 10px;
-  transition: all 0.3s ease-in-out;
-  color: yellow !important;
+.footer-links{
+  li{
+      a{
+          transition: .3s;
+
+          &:hover{
+              margin-left: 10px;
+              transition: .3s;
+              color: yellow !important;
+          }
+      }
+  }
+}
+
+.max-w-100{
+  max-width: 100% !important;
 }
 
 //shopping-cart
