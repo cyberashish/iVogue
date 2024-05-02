@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useReducer } from "react";
+import React, { useReducer } from "react";
 import { useEffect, useState } from "react";
 
 import leather_img from "/public/images/leather_case.png";
@@ -123,7 +123,6 @@ const MobileCovers = () => {
   },[]);
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
     <>
       <CoverHeader />
       <div className="d-flex gap-4 overflow-x-auto d-flex justify-content-md-center pb-md-11 pb-0 mb-sm-0 mb-8">
@@ -285,7 +284,6 @@ const MobileCovers = () => {
         </div>
       </div>
     </>
-    </Suspense>
   );
 };
 
