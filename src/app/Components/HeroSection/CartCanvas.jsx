@@ -9,6 +9,8 @@ import CartCanvasItem from "./CartCanvasItem";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 
 const CartCanvas = () => {
   const router = useRouter();
@@ -32,8 +34,7 @@ const CartCanvas = () => {
           <Icon icon="tabler:circle-x" fontSize={25} />
         </Link>
       </div>
-      <div className="offcanvas-body px-0">
-        <div className="position-relative  text-center my-4 mb-9">
+      <div className="position-relative  text-center my-4 mb-9">
           <Link href='#' className='text-black  bg-white z-1 px-10 hover-link position-relative'>
             <Icon icon="tabler:shopping-cart" fontSize={25} data-bs-toggle="offcanvas" href="#Cartoffcanvas" role="button" aria-controls="Cartoffcanvas" />
             {items === 0 ? null : <span className="position-absolute top-0 translate-middle badge rounded-circle  bg-black">
@@ -42,15 +43,16 @@ const CartCanvas = () => {
           </Link>
           <span className="border-top w-100 position-absolute top-50 start-50 translate-middle"></span>
         </div>
+      <SimpleBar className="filter-canvas">
         <div className="d-md-flex">
-          <div className="cart-items px-4" style={{ minWidth: '500px' }}>
+          <div className="cart-items px-4">
             {filteredCart.length === 0 ? <h1 className="my-4">No Product in this cart yet!</h1> : filteredCart.map((prod) => {
               const newcat = prod.category.replace('-', ' ').toUpperCase();
               return <CartCanvasItem prodId={prod.key} image={prod.thumbnail} title={prod.title} quantity={prod.quantity} category={newcat} />
             })}
           </div>
         </div>
-      </div>
+        </SimpleBar>
       <div className="offcanvas-footer px-4">
         <div>
           <button className="btn btn-outline-indigo px-8 py-55 lh-1 fs-3 border-2  w-100 fw-normal" onClick={() => {
