@@ -63,6 +63,8 @@ $darkscale-variant:#424553;
 $grayextra:#94969F;
 $lightextra:#E0EAFD;
 $darkextra:#B7C0D2;
+$darkalpha:#000000de;
+
 
 // Theme Colorss
 $theme-colors: (
@@ -96,6 +98,9 @@ $theme-colors: (
     'grayextra':$grayextra,
     'lightextra':$lightextra,
     'darkextra':$darkextra,
+    'darkalpha':$darkalpha,
+    'bodyclr':#909090,
+    'bgfooter':#004adf,
   ) !default;
 
 // Spacer
@@ -128,6 +133,9 @@ $spacers: (
   60:11px,
   61:92px,
   63:15px,
+  64:2px,
+  65:18px,
+  66:22px,
   ) !default;
 
   // Font Sizes
@@ -152,6 +160,11 @@ $font-sizes: (
   55:28px,
   56:15px,
   80:80px,
+  81:13px,
+  82:26px,
+  83:17px,
+  84:36px,
+  85:33px
   ) !default;
 $font-size-base: 0.875rem !default;
 
@@ -232,7 +245,7 @@ $badge-border-radius: 4px;
 
 // Style anchor elements.
 
-$link-color:                              #073BA8 !default;
+$link-color:                              #000000de !default;
 $link-hover-color:                        $primary;
 $link-hover-decoration:                   null !default;
 
@@ -287,7 +300,6 @@ $navbar-light-hover-color: rgba($primary, 1) !default;
 $navbar-dark-color: rgba($gray-300, 1) !default;
 $navbar-dark-hover-color: rgba($primary, 1) !default;
 
-$font-family-sans-serif: 'Helvetica Neue LT Std', sans-serif !default;
 
 $accordion-icon-color:#D1CDC5;
 $accordion-icon-active-color:$indigo;
@@ -297,4 +309,27 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 $accordion-icon-width:  1.75rem !default;
 .accordion-button:focus{
   box-shadow: none !important;
+}
+
+$nav-tabs-link-active-bg: var(--bs-primary) !default;
+
+//Font Family
+
+h1, h2, h3, h4, h5, h6,li,button,i {
+  font-family: "Trade Gothic LT Std Bold", sans-serif;
+  font-weight: bold;
+}
+span{
+  font-family: "Graphik Regular", sans-serif;
+}
+.btn{
+  font-family: "Trade Gothic LT Std Bold", sans-serif !important;
+  font-weight: bold !important;
+}
+.font-trade{
+  font-family: "Trade Gothic LT Std Bold", sans-serif !important;
+  font-weight: bold !important;
+}
+.font-graphik{
+  font-family: "Graphik Regular", sans-serif !important;
 }

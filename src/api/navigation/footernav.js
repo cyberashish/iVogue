@@ -2,8 +2,8 @@
 export const Company = [
     { key: "about-us", href: "about-us", label: "About Us" },
     { key: "contact-us", href: "contact", label: "Contact us" },
+    { key: "Blog", href: "blog", label: "Blog" },
     { key: "terms-of-service", href: "terms-of-service", label: "Terms of Service" },
-    { key: "privacy-policy", href: "privacy-policy", label: "Privacy Policy" },
 ]
 
 export const Products = [

@@ -62,7 +62,7 @@ useEffect(()=>{
                     </span>
                   </div>
                   <button
-                    className="btn btn-primary rounded-0 gap-1 fs-2 px-51 fw-nomral d-flex align-items-center "
+                    className="btn btn-primary rounded-0 gap-1 text-uppercase fs-2 px-51 fw-nomral d-flex align-items-center "
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
@@ -100,17 +100,17 @@ useEffect(()=>{
               <span className="text-black fs-6 fw-normal">
                {` Item Total (${cartInfo.length} Item)`}
               </span>
-              <span className="text-black fs-6 fw-normal">{`Rs.${totalPrice}`}</span>
+              <span className="text-black fs-6 fw-medium">{`Rs.${totalPrice}`}</span>
             </div>
             <div className="d-flex justify-content-between align-align-items-center ">
               <span className="text-black fs-6 fw-normal">Shipping</span>
-              <span className="text-black fs-6 fw-normal">FREE</span>
+              <span className="text-black fs-6 fw-medium">FREE</span>
             </div>
             <div className="d-flex justify-content-between align-align-items-center ">
               <span className="text-black fs-55 fw-bold">Grand Total</span>
               <span className="text-black fs-55 fw-bold">{`Rs.${totalPrice}`}</span>
             </div>
-            <button className="btn btn-primary fw-bold fs-5  rounded-0" onClick={handleCheckout}>
+            <button className="btn btn-primary fw-bold fs-5 text-uppercase rounded-0" onClick={handleCheckout}>
               Process To Checkout
             </button>
           </div>

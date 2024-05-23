@@ -53,7 +53,7 @@ const LikedProducts = () => {
     <>
       <div className="container">
         <div className="d-flex mb-8 gap-1 justify-content-center align-items-center">
-          <h2 className="fs-8 text-dark text-capitalize   text-center fw-bold mb-0">
+          <h2 className="fs-8 text-dark text-uppercase   text-center fw-bold mb-0">
           You May Also Like
           </h2>
         </div>

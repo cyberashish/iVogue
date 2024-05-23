@@ -79,10 +79,10 @@ const CheckoutSummary = () => {
             </div>
             <div className="d-flex justify-content-between ">
               <span className="fs-55 fw-bold text-black">Order Total</span>
-              <span className="fs-55 fw-bold text-black">{`RS${totalPrice}`}</span>
+              <span className="fs-55 fw-bold text-black">{`Rs. ${totalPrice}`}</span>
             </div>
             <div>
-              <button className="btn btn-primary py-6 rounded-0 fs-5 fw-normal w-100" onClick={handleOrder}>Place Order</button>
+              <button className="btn btn-primary py-6 rounded-0 fs-5 fw-normal w-100 text-uppercase" onClick={handleOrder}>Place Order</button>
               <ToastContainer />
             </div>
           </div>

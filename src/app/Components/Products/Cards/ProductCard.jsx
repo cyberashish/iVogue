@@ -12,46 +12,52 @@ const ProductCard = ({title,category,price,discountedPrice,thumbnail,image,disco
   return (
     <>
       
-      <div className="col-xl-4 col-sm-6 col-lg-4" onClick={() => {router.push(`/category/${parenturl}/${prodId}`)}}>
-        <div className="bg-light py-3 px-13">
+      <div className="col-xl-3 col-sm-6 col-lg-4" onClick={() => {router.push(`/mobile-cases/category/${parenturl}/${prodId}`)}}>
+        <div className="bg-light">
         <div
-          className="group-img position-relative"
-          style={{ cursor: "pointer" , height:"430px"  , width:"100%"}}
-          onMouseOver={() => {
-            setFrontimg("opacity-0");
-            setBackimg("opactiy-100");
-          }}
-          onMouseLeave={() => {
-            setFrontimg("opacity-100");
-            setBackimg("opacity-0");
-          }}
+          className="group-img position-relative pointer w-100"
+          
         >
           <Image
             src={thumbnail}
             alt="img"
-            className={`w-100 mobile-cover-images front-img position-absolute top-0 left-0  ${frontimg}`}
+            className={`w-100 mobile-cover-images front-img`}
+            style={{
+              width:"100%",
+              height:"100%"
+            }}
           />
           <Image
             src={image}
             alt="img"
-            className={`w-100 mobile-cover-images back-img position-absolute top-0 left-0 ${backimg}`}
+            className={`w-100 mobile-cover-images back-img `}
+            style={{
+              width:"100%",
+              height:"100%"
+            }}
           />
         </div>
-        <h3 className="text-dark-gray  fw-bold fs-6">
+         <div className="px-3">
+          <div className="d-flex flex-column gap-1">
+          <h3 className="text-dark-gray text-uppercase fw-bold fs-5 mb-0">
           {title}
         </h3>
-        <div className="d-flex justify-content-between mt-1">
-          <span className="fs-5 fw-normal text-dark-gray ">
-            {`From Rs.${discountedPrice}`}
+        <div className="d-flex row-gap-1 column-gap-3  align-items-center flex-wrap ">
+          <span className="fs-5 fw-normal text-dark-gray  d-flex gap-64">
+            <span className='font-trade'>{` Rs.`}</span>
+            <span className='font-trade'>{` ${discountedPrice}`}</span>
           </span>
-          <span className="fs-5 fw-normal text-dark-gray  text-decoration-line-through">
+          <span className="fs-5 fw-normal text-grayextra font-trade  text-decoration-line-through">
             {price}
           </span>
-          <span className="fs-5 fw-normal text-indigo">{`Save rs.${discount}`}</span>
+          <span className="fs-4 fw-bold text-success d-block">{`Saved Rs. ${discount}`}</span>
         </div>
-        <button className="btn btn-outline-indigo border-2  rounded-0 w-100  fs-3 py-55 lh-1 mt-2 fw-normal">
+        
+          </div>
+        <button className="btn btn-outline-indigo border-2 text-uppercase rounded-0 w-100  fs-3 py-55 lh-1 mt-2 fw-normal">
           Inquire Now
         </button>
+         </div>
         </div>
       </div>
     </>

@@ -87,7 +87,7 @@ const SelectedProduct = ({data}) => {
           <div className="col-lg-6 d-flex flex-column justify-content-between gap-lg-0 gap-4">
               <div>
               <h5 className="fs-6 text-gray-emphasis text-uppercase fw-normal mb-1">{data.title}</h5>
-             <h3 className="text-black fw-bold fs-8">{`Legendary Logos Stride 2.0 ${data.mastercat} For ${data.title}`}</h3>
+             <h3 className="text-black fw-bold text-uppercase fs-85">{`Legendary Logos Stride 2.0 ${data.mastercat} For ${data.title}`}</h3>
               </div>
              <div className="d-flex gap-lg-10 align-items-center flex-lg-nowrap flex-wrap gap-4">
              <h3 className="text-subtle-dark fw-bold fs-8 mb-0" style={{letterSpacing:"0.5px"}}>{`Rs.${data.discountedPrice}`}</h3>
@@ -147,21 +147,21 @@ const SelectedProduct = ({data}) => {
           <div>
           <h3 className="text-subtle-dark fw-bold fs-6 half-letter ">Exciting Offers</h3>
         <ul className="list-unstyled ">
-          <li className="fs-6 fw-normal text-subtle-dark text-capitalize d-flex align-items-center  gap-51"><div className="round-12 bg-subtle-dark"></div>buy any 2 get extra 20 off </li>
-          <li className="fs-6 fw-normal text-subtle-dark text-capitalize d-flex align-items-center  gap-51"><div className="round-12 bg-subtle-dark"></div>Free Duffle Bag on all orders above Rs.2499 </li>
+          <li className="fs-6 fw-normal font-graphik text-subtle-dark text-capitalize d-flex align-items-center  gap-51"><div className="round-12 bg-subtle-dark"></div>buy any 2 get extra 20 off </li>
+          <li className="fs-6 fw-normal font-graphik text-subtle-dark text-capitalize d-flex align-items-center  gap-51"><div className="round-12 bg-subtle-dark"></div>Free Duffle Bag on all orders above Rs.2499 </li>
         </ul>
           </div>
            <div className="d-flex flex-column gap-2">
            <div className="d-flex flex-wrap">
           <div className="d-flex align-items-center  gap-7 py-6 px-7  border border-subtle-dark border-2 cartbtn ">
 
-           <button className="btn p-0 border-0"><Icon icon="ph:plus" className="text-subtle-dark fs-53 pointer" onClick={handleAddProduct} /></button>
+          <button className="btn p-0 border-0"><Icon icon="ph:minus" className="text-subtle-dark fs-53 pointer" onClick={handleDeleteProduct} /></button>
            <span className="text-subtle-dark fs-53">{prodQuantity}</span>
-           <button className="btn p-0 border-0"><Icon icon="ph:minus" className="text-subtle-dark fs-53 pointer" onClick={handleDeleteProduct} /></button>
+           <button className="btn p-0 border-0"><Icon icon="ph:plus" className="text-subtle-dark fs-53 pointer" onClick={handleAddProduct} /></button>
           </div>
           <div className="flex-grow-1">
           <div className="d-flex btn btn-primary rounded-0 justify-content-center align-align-items-center h-100" onClick={handleshoppingCart}>
-          <span className="text-white fw-normal letter fs-53 text-uppercase align-self-center">Add to bag</span>
+          <span className="text-white fw-normal fw-semibold letter fs-53 text-uppercase align-self-center">Add to bag</span>
           </div><ToastContainer />
           </div>
            </div>
@@ -174,8 +174,8 @@ const SelectedProduct = ({data}) => {
            </div>
            </div>
            <form className='ps-2 border border-light-gray rounded-2 position-relative d-flex align-items-stretch  '>
-                <input type="nmber" className="form-control ps-2 py-2 fw-light fs-5 border-0 shadow-none " id="exampleFormControlInput1" placeholder="Enter Pincode To Check Delivery..." />
-                <div className="check">
+                <input type="nmber" className="form-control ps-2 py-2 fw-light text-grayvariant fw-normal fs-5 border-0 shadow-none " id="exampleFormControlInput1" placeholder="Enter Pincode To Check Delivery..." />
+                <div className="check fw-medium">
                 Check
                 </div>
               </form>

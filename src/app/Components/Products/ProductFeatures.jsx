@@ -12,7 +12,7 @@ import ProductFeatureCard from './Cards/ProductFeatureCard'
 const ProductFeatures = () => {
   return (
     <div>
-      <h2 className='text-black fs-54 fw-bold letter text-center my-lg-52 my-10'>Why Choose?</h2>
+      <h2 className='text-black fs-54 fw-bold letter text-center my-lg-52 my-10 text-uppercase'>Why Choose?</h2>
       <div className="container">
         <div className="row gy-4">
             <div className="col-lg-4 align-items-stretch justify-content-between d-flex flex-column gap-lg-0 gap-4">

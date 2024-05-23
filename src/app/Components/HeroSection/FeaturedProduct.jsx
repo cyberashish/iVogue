@@ -6,21 +6,33 @@ const FeaturedProduct = ({image,title,price,discountedPrice,discount}) => {
     <>
       <div className="p-6">
         <div className="productbox bg-gray p-3 position-relative">
-          <div className="badge position-absolute bg-primary-subtle rounded-0 text-dark fw-normal fs-4 px-3">
-            New
+          <div  className="badge position-absolute bg-primary-subtle rounded-pill  text-dark fw-normal fs-4 px-3">
+            <span style={{top:"0px"}} className="position-relative">New</span>
           </div>
           <div className="text-center hover-img overflow-hidden">
             <Image src={image} alt="img" className="img-fluid" />
           </div>
-          <h5 className="text-dark-gray fs-6 mb-6">{title}</h5>
-          <div className="d-flex align-items-center justify-content-between">
-            <h6 className="text-dark-gray fw-normal mb-0 fs-5">{`From Rs.${discountedPrice}`}</h6>
-            <p className="text-dark-gray  mb-0 fs-5 text-decoration-line-through ">{price}</p>
-            <span className="text-indigo fs-5">{`Save rs.${discount}`}</span>
+          <div className="px-0">
+          <div className="d-flex flex-column gap-1">
+          <h3 className="text-dark-gray text-uppercase fw-bold fs-5 mb-0">
+          {title}
+        </h3>
+        <div className="d-flex gap-3 align-items-center flex-wrap ">
+          <span className="fs-5 fw-normal text-dark-gray  d-flex gap-64">
+            <span className='font-trade'>{` Rs.`}</span>
+            <span className='font-trade'>{` ${discountedPrice}`}</span>
+          </span>
+          <span className="fs-5 fw-normal text-grayextra font-trade  text-decoration-line-through">
+            {price}
+          </span>
+          <span className="fs-4 fw-bold text-success d-block">{`Saved Rs. ${discount}`}</span>
+        </div>
+        
           </div>
-          <button className="btn btn-outline-indigo px-8 mt-2 py-55 lh-1 fs-3 border-2  w-100 fw-normal">
-            Inquire Now
-          </button>
+        <button className="btn btn-outline-indigo border-2 text-uppercase rounded-0 w-100  fs-3 py-55 lh-1 mt-2 fw-normal">
+          Inquire Now
+        </button>
+         </div>
         </div>
       </div>
     </>

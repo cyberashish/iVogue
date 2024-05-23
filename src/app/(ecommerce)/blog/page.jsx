@@ -10,7 +10,7 @@ const LatestBlog = () => {
         <>
             <div className='py-md-12 py-8'>
                 <div className='container'>
-                    <h2 className='text-center fs-8 fw-semibold mb-8'>Latest Blog</h2>
+                    <h2 className='text-center fs-8 fw-semibold mb-8 text-uppercase'>Latest Blog</h2>
                     <div className='row'>
                         {BlogData.map((blog) => {
                             return (

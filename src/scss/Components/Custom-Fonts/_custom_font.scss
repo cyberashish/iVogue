@@ -1,38 +1,63 @@
-// font-face
 
-@font-face {
-    font-family: 'Helvetica Neue LT Std';
-    src: url(../../../../public/fonts/NeueHelveticaBQ-Bold.otf);
-    font-weight: 700;
-  }
 // @font-face {
-//     font-family: 'Helvetica Neue';
-//     src: url(../../../../public/fonts/HelveticaNeueHeavy.otf);
-//     font-weight: 600;
-//   }
+//   font-family: "Graphik", sans-serif;
+//   src: url(../../../../public/fonts/Subtitle/GraphikBold.otf);
+//   font-weight: 700;
+// }
 // @font-face {
-//     font-family: 'Helvetica Neue';
-//     src: url(../../../../public/fonts/HelveticaNeueMedium.otf);
-//     font-weight: 500;
-//   }
+//   font-family: "Graphik", sans-serif;
+//   src: url(../../../../public/fonts/Subtitle/GraphikSemibold.otf);
+//   font-weight: 600;
+// }
+// @font-face {
+//   font-family: "Graphik", sans-serif;
+//   src: url(../../../../public/fonts/Subtitle/GraphikMedium.otf);
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: "Graphik ", sans-serif;
+//   src: url(../../../../public/fonts/Subtitle/GraphikRegular.otf);
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: "Graphik Light", sans-serif;
+//   src: url(../../../../public/fonts/Subtitle/GraphikLight.otf);
+//   font-weight: 300;
+// }
 @font-face {
-    font-family: 'Helvetica Neue LT Std';
-    src: url(../../../../public/fonts/HelveticaNeueLTStd-Roman.otf);
-    font-weight: 400;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../../../../public/fonts/Subtitle/GraphikExtralight.otf);
   }
 @font-face {
-    font-family: 'Helvetica Neue LT Std';
-    src: url(../../../../public/fonts/HelveticaNeueLTStd-Lt.otf);
-    font-weight: 300;
+  font-family: 'Graphik Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../../../public/fonts/Subtitle/GraphikLight.otf);
   }
-// @font-face {
-//     font-family: 'Helvetica Neue';
-//     src: url(../../../../public/fonts/HelveticaNeueUltraLight.otf);
-//     font-weight: 200;
-//   }
-  
+@font-face {
+  font-family: 'Graphik Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../../public/fonts/Subtitle/GraphikRegular.otf);
+  }
+@font-face {
+  font-family: 'Graphik Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../../../public/fonts/Subtitle/GraphikMedium.otf);
+  }
+
+  @font-face {
+    font-family: 'Trade Gothic LT Std Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url(../../../../public/fonts/title/TradeGothic-LT-Bold-Regular.ttf);
+    }
+
 html{
-    font-family:'Helvetica Neue LT Std', sans-serif !important;
+    font-family:"Graphik Regular", sans-serif !important;
   }
   
 .title{

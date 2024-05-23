@@ -52,8 +52,8 @@ const Instafeed = () => {
     return (
         <>
             <div className='py-sm-12 py-8 overflow-hidden'>
-                <h2 className='text-center fs-8 fw-semibold mb-2'>Everyday Inspiration</h2>
-                <p className='text-center fs-6 text-dark'>Follow @ivogue for latest update</p>
+                <h2 className='text-center fs-8 fw-semibold mb-2 text-uppercase'>Everyday Inspiration</h2>
+                <p className='text-center fs-4 text-dark'>Follow @ivogue for latest update</p>
                 <div className="slider-container">
                     <Slider {...settings}>
                         {Instadata.map((insta) => {

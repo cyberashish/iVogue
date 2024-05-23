@@ -13,22 +13,22 @@ const ExploreRange = () => {
     return (
         <>
             <div className='container py-10'>
-                <h2 className='text-center fs-8 fw-semibold mb-9 text-capitalize' >explore the range</h2>
-                <ul className="nav nav-pills text-nowrap mb-3 d-flex flex-nowrap overflow-x-auto gap-4 justify-content-lg-center explore" id="pills-tab" role="tablist">
+                <h2 className='text-center fs-8 fw-semibold mb-9 text-uppercase fs-12' >explore the range</h2>
+                <ul className="nav explore-tabs nav-pills text-nowrap mb-3 d-flex flex-nowrap overflow-x-auto gap-4 justify-content-lg-center explore" id="pills-tab" role="tablist">
                     <li className="nav-item " role="presentation">
-                        <button className="nav-link rounded-0 active text-capitalize fs-4" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">all</button>
+                        <button className="nav-link rounded-0 active  fs-4 text-uppercase rounded-pill px-4 py-58 " id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">all</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link rounded-0  text-capitalize fs-4" id="pills-lather-tab" data-bs-toggle="pill" data-bs-target="#pills-lather" type="button" role="tab" aria-controls="pills-lather" aria-selected="false">Lather case</button>
+                        <button className="nav-link rounded-0   fs-4 text-uppercase rounded-pill px-4 py-58 " id="pills-lather-tab" data-bs-toggle="pill" data-bs-target="#pills-lather" type="button" role="tab" aria-controls="pills-lather" aria-selected="false">Leather case</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link rounded-0  text-capitalize fs-4" id="pills-hard-tab" data-bs-toggle="pill" data-bs-target="#pills-hard" type="button" role="tab" aria-controls="pills-hard" aria-selected="false">hard case</button>
+                        <button className="nav-link rounded-0   fs-4 text-uppercase rounded-pill px-4 py-58 " id="pills-hard-tab" data-bs-toggle="pill" data-bs-target="#pills-hard" type="button" role="tab" aria-controls="pills-hard" aria-selected="false">hard case</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link rounded-0 text-capitalize fs-4" id="pills-transparent-tab" data-bs-toggle="pill" data-bs-target="#pills-transparent" type="button" role="tab" aria-controls="pills-transparent" aria-selected="false">transparent case</button>
+                        <button className="nav-link rounded-0  fs-4 text-uppercase rounded-pill px-4 py-58 " id="pills-transparent-tab" data-bs-toggle="pill" data-bs-target="#pills-transparent" type="button" role="tab" aria-controls="pills-transparent" aria-selected="false">transparent case</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link rounded-0 text-capitalize fs-4" id="pills-phone-tab" data-bs-toggle="pill" data-bs-target="#pills-phone" type="button" role="tab" aria-controls="pills-phone" aria-selected="false">Phone Cases</button>
+                        <button className="nav-link rounded-0  fs-4 text-uppercase rounded-pill px-4 py-58 " id="pills-phone-tab" data-bs-toggle="pill" data-bs-target="#pills-phone" type="button" role="tab" aria-controls="pills-phone" aria-selected="false">Phone Cases</button>
                     </li>
                 </ul>
                 <div className="tab-content mt-5 pb-3" id="pills-tabContent">
@@ -40,7 +40,7 @@ const ExploreRange = () => {
                                         return (
                                             <div className='col-6' key={exp1.key}>
                                                 <div className='bg-gray p-md-5 p-3 pb-4 position-relative text-center mb-4'>
-                                                    <Link href={`/category/mobile-covers?prodcat=${exp1.url}`} className='text-decoration-none'>
+                                                    <Link href={`/mobile-cases/brand-identifier`} className='text-decoration-none'>
                                                         <div className='position-relative hover-img overflow-hidden'>
                                                             <Image
                                                                 src={exp1.img}
@@ -48,7 +48,7 @@ const ExploreRange = () => {
                                                                 className='object-fit-cover'
                                                                 style={{ width: "100%", height: "100%" }}
                                                             />
-                                                            <h3 className='fs-6 fw-normal text-black text-capitalize pt-2'>{exp1.title}</h3>
+                                                            <h3 className='fs-6 fw-normal text-black text-uppercase pt-2'>{exp1.title}</h3>
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -84,7 +84,7 @@ const ExploreRange = () => {
                                         return (
                                             <div className='col-6' key={exp2.key}>
                                                 <div className='bg-gray p-md-5 p-3 pb-4 position-relative text-center mb-4'>
-                                                    <Link href={`/category/mobile-covers?prodcat=${exp2.url}`} className='text-decoration-none'>
+                                                    <Link href={`/mobile-cases/brand-identifier`} className='text-decoration-none'>
                                                         <div className='position-relative hover-img overflow-hidden'>
                                                             <Image
                                                                 src={exp2.img}
@@ -92,7 +92,7 @@ const ExploreRange = () => {
                                                                 className='object-fit-cover'
                                                                 style={{ width: "100%", height: "100%" }}
                                                             />
-                                                            <h3 className='fs-6 fw-normal text-black text-capitalize pt-2'>{exp2.title}</h3>
+                                                            <h3 className='fs-6 fw-normal text-black  pt-2 text-uppercase'>{exp2.title}</h3>
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -127,7 +127,7 @@ const ExploreRange = () => {
                                         return (
                                             <div className='col-6' key={exp3.key}>
                                                 <div className='bg-gray p-md-5 p-3 pb-4 position-relative text-center mb-4'>
-                                                    <Link href={`/category/mobile-covers?prodcat=${exp3.url}`} className='text-decoration-none'>
+                                                    <Link href={`/mobile-cases/brand-identifier`} className='text-decoration-none'>
                                                         <div className='position-relative hover-img overflow-hidden'>
                                                             <Image
                                                                 src={exp3.img}
@@ -135,7 +135,7 @@ const ExploreRange = () => {
                                                                 className='object-fit-cover'
                                                                 style={{ width: "100%", height: "100%" }}
                                                             />
-                                                            <h3 className='fs-6 fw-normal text-black text-capitalize pt-2'>{exp3.title}</h3>
+                                                            <h3 className='fs-6 fw-normal text-black  pt-2 text-uppercase'>{exp3.title}</h3>
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -170,7 +170,7 @@ const ExploreRange = () => {
                                         return (
                                             <div className='col-6' key={exp4.key}>
                                                 <div className='bg-gray p-md-5 p-3 pb-4 position-relative text-center mb-4'>
-                                                    <Link href={`/category/mobile-covers?prodcat=${exp4.url}`} className='text-decoration-none'>
+                                                    <Link href={`/mobile-cases/brand-identifier`} className='text-decoration-none'>
                                                         <div className='position-relative hover-img overflow-hidden'>
                                                             <Image
                                                                 src={exp4.img}
@@ -178,7 +178,7 @@ const ExploreRange = () => {
                                                                 className='object-fit-cover'
                                                                 style={{ width: "100%", height: "100%" }}
                                                             />
-                                                            <h3 className='fs-6 fw-normal text-black text-capitalize pt-2'>{exp4.title}</h3>
+                                                            <h3 className='fs-6 fw-normal text-black  pt-2 text-uppercase'>{exp4.title}</h3>
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -213,7 +213,7 @@ const ExploreRange = () => {
                                         return (
                                             <div className='col-6' key={exp5.key}>
                                                 <div className='bg-gray p-md-5 p-3 pb-4 position-relative text-center mb-4'>
-                                                    <Link href={`/category/mobile-covers?prodcat=${exp5.url}`} className='text-decoration-none'>
+                                                    <Link href={`/mobile-cases/brand-identifier`} className='text-decoration-none'>
                                                         <div className='position-relative hover-img overflow-hidden'>
                                                             <Image
                                                                 src={exp5.img}
@@ -221,7 +221,7 @@ const ExploreRange = () => {
                                                                 className='object-fit-cover'
                                                                 style={{ width: "100%", height: "100%" }}
                                                             />
-                                                            <h3 className='fs-6 fw-normal text-black text-capitalize pt-2'>{exp5.title}</h3>
+                                                            <h3 className='fs-6 fw-normal text-black  pt-2 text-uppercase'>{exp5.title}</h3>
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -250,7 +250,7 @@ const ExploreRange = () => {
                     </div>
                 </div>
                 <div className='d-flex justify-content-center '>
-                    <button className="btn btn-outline-indigo px-12 mt-2 py-2 w-100 fw-normal w-auto" onClick={()=>{router.push('/category/mobile-covers')}}>View All</button>
+                    <button className="btn btn-outline-indigo text-uppercase px-12 mt-2 py-2 w-100 fw-normal w-auto" onClick={()=>{router.push('/category/mobile-covers')}}>View All</button>
                 </div>
             </div>
         </>

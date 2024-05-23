@@ -16,17 +16,17 @@ const CommonProductCard = ({image}) => {
       <div className="position-relative p-6">
         <div className="bg-light pb-3 px-13">
           <Image src={image} alt="image" className="img-fluid" />
-          <h3 className="text-dark-gray  fw-bold fs-6">iPhone 15 Pro Max</h3>
+          <h3 className="text-dark-gray  fw-bold fs-6 text-uppercase">iPhone 15 Pro Max</h3>
           <div className="d-flex justify-content-between mt-1">
-            <span className="fs-5 fw-normal text-dark-gray ">
-              {`From Rs.699`}
+            <span className="fs-5 font-trade fw-normal text-dark-gray ">
+              {` Rs.699`}
             </span>
-            <span className="fs-5 fw-normal text-dark-gray  text-decoration-line-through">
+            <span className="fs-5 fw-normal text-grayextra font-trade  text-decoration-line-through">
               1399
             </span>
-            <span className="fs-5 fw-normal text-indigo">{`Save rs.700`}</span>
+            <span className="fs-4 fw-bold text-success d-block">{`Saved Rs.700`}</span>
           </div>
-          <p className="mb-0 fw-normal fs-5 text-danger mt-2">
+          <p className="mb-0 fw-semibold font-graphik fw-medium fs-5 text-danger mt-2">
             BUY 2 @ 20% OFF
           </p>
         </div>

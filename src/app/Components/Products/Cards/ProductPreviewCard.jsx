@@ -25,21 +25,21 @@ const ProductPreviewCard = ({ shareIcon, image, heartIcon,prodInfo}) => {
             <Icon icon={heartIcon} className="text-dark fs-52" />
           </Link>
         </div>
-        <div
+        {/* <div
           className="zoom position-absolute pointer"
           onClick={() => setOpen(true)}
           style={{ bottom: "45px", right: "45px" }}
         >
           <Icon icon="ic:baseline-fullscreen" className="text-dark fs-9" />
-        </div>
+        </div> */}
       </div>
-      <Lightbox
+      {/* <Lightbox
         open={open}
         close={() => setOpen(false)}
         slides={[prodInfo.sliderthumbnail, ...prodInfo.photos]}
         render={{ slide: NextJsImage }}
         plugins={[Thumbnails]}
-      />
+      /> */}
     </>
   );
 };

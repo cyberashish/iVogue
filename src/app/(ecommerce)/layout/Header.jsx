@@ -6,14 +6,16 @@ import logo from "/public/images/logo.png"
 import { NAV_LINKS } from '@/api/navigation/navigation'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useProduct } from '@/store/CartProvider/CartData'
 import CartCanvas from '@/app/Components/HeroSection/CartCanvas'
+import gift from "/public/images/Navigation/gift_wrapper.png"
 
 const Header = () => {
   const [baseurl, setbaseurl] = useState();
   const pathname = usePathname();
   const productContext = useProduct();
+  const router = useRouter();
   const items = productContext.cartvalue.length;
   useEffect(() => {
     const url = window.location.origin;
@@ -23,16 +25,16 @@ const Header = () => {
     <>
       <div className="border-bottom border-2">
         <div className="container">
-          <div className='bg-white d-flex justify-content-between align-items-center py-3'>
+          <div className='bg-white d-flex justify-content-between align-items-center py-64'>
             <div className='d-flex gap-sm-4 gap-3'>
-              <Link href={"#menucanvasExample"} className="d-xl-none d-flex text-black" data-bs-toggle="offcanvas"  role="button" aria-controls="menucanvasExample">
+              <Link href={"#menucanvasExample"} className="d-xl-none d-flex text-darkalpha" data-bs-toggle="offcanvas"  role="button" aria-controls="menucanvasExample">
                 <Icon icon="tabler:menu-2" fontSize={25} />
               </Link>
-              <Link href={"#"} className="d-xl-none d-flex text-black" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <Link href={"#"} className="d-xl-none d-flex text-darkalpha" data-bs-toggle="modal" data-bs-target="#searchModal">
                 <Icon icon="tabler:search" fontSize={25} />
               </Link>
             </div>
-            <Link href={'/'}><Image src={logo} alt='image' className='logo' /></Link>
+            <Link href={'/'}><Image src={logo} alt='image' className='logo' style={{transform:"scale(0.7)"}} /></Link>
 
             {/* Mobile Menu  */}
             <div className="offcanvas offcanvas-end bg-primary" tabIndex="-1" id="menucanvasExample" aria-labelledby="menucanvasExampleLabel">
@@ -46,7 +48,7 @@ const Header = () => {
                 <ul className='list-unstyled mb-0 ms-auto'>
                   {NAV_LINKS.map((nav_link) => {
                     return (
-                      <li key={nav_link.key} className='fs-5 font-normal mb-8' ><Link href={nav_link.href} as={`${baseurl}/${nav_link.href}`} className={`text-decoration-none fw-light ${pathname.includes(nav_link.href) ? 'text-warning' : ''}`}>{nav_link.label}</Link></li>
+                      <li key={nav_link.key} className=' mb-8' ><Link href={`/${nav_link.href}`}  className={`text-decoration-none fs-56 fw-semibold ${pathname.includes(nav_link.href) ? 'text-warning' : ''}`}>{nav_link.label}</Link></li>
                     )
                   })}
                 </ul>
@@ -63,20 +65,32 @@ const Header = () => {
             </div>
 
             {/* Desktop Menu  */}
-            <ul className='d-flex gap-5 list-unstyled mb-0 ms-auto d-xl-flex d-none'>
+            <ul className='d-flex gap-4  list-unstyled mb-0 ms-auto d-xl-flex d-none'>
               {NAV_LINKS.map((nav_link) => {
-                return (
-                  <li key={nav_link.key} className='fs-5 font-normal' ><Link href={nav_link.href} as={`${baseurl}/${nav_link.href}`} className={`text-decoration-none fw-normal ${pathname.includes(nav_link.href) ? 'text-primary' : ''}`}>{nav_link.label}</Link></li>
-                )
+                  if(nav_link.label==='GIFTING'){
+                    return (
+                     
+                        <div key={nav_link.key} className="dropdown navigation-item position-static" onClick={()=>router.push(`/${nav_link.href}`)}>
+                        <li className='fs-4 position-relative'>
+                        <div  className={`text-decoration-none  fw-bold ${pathname.includes(nav_link.href) ? 'text-primary' : ''}`}>{nav_link.label}</div>
+                        <Image src={gift} alt='image' className='position-absolute   gift-wrapper' />
+                        </li>
+                         {nav_link.dropContent}
+                      </div>
+                 
+                    )
+                  }
+                  else{
+                    return (
+                      <div key={nav_link.key} className="dropdown navigation-item position-static" onClick={()=>router.push(`/${nav_link.href}`)}>
+                     <li className='fs-4 check-font position-relative' ><div  className={`text-decoration-none fw-bold ${pathname.includes(nav_link.href) ? 'text-primary' : ''}`}>{nav_link.label}</div></li>
+                       {nav_link.dropContent}
+                    </div>
+                    )
+                  }
               })}
             </ul>
             <div className="d-flex align-items-center ms-xl-auto gap-5">
-              <form className='ps-2 border border-light-gray rounded-2 position-relative d-xl-flex align-items-center d-none'>
-                <Icon icon='bitcoin-icons:search-outline' className='text-muted fs-8' />
-                <input type="search" className="form-control ps-2 py-2 fw-light fs-4 border-0 shadow-none " id="exampleFormControlInput1" placeholder="Search for Products, brands and more..." />
-              </form>
-
-              {/* Search Modal */}
               <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
                 <div className="modal-dialog  m-0 max-w-100 modal-xl">
                   <div className="modal-content rounded-0">
@@ -92,10 +106,13 @@ const Header = () => {
               </div>
 
 
-              <div className="d-flex gap-sm-7 gap-3">
-                <Link href="/" className='text-black hover-link'><Icon icon="tabler:user" fontSize={25} /></Link>
-                <span className='text-black hover-link position-relative' data-bs-toggle="offcanvas" href="#Cartoffcanvas" role="button" aria-controls="Cartoffcanvas">
-                  <Icon icon="tabler:shopping-cart" fontSize={25} />
+              <div className="d-flex gap-13">
+                <Link href="/" className='text-darkscale-variant hover-link'><Icon icon="tabler:user" fontSize={23} /></Link>
+                <Link href='/search' className=" text-darkscale-variant" >
+                <Icon icon="tabler:search" fontSize={23} />
+              </Link>
+                <span className='text-darkscale-variant hover-link position-relative' data-bs-toggle="offcanvas" href="#Cartoffcanvas" role="button" aria-controls="Cartoffcanvas">
+                  <Icon icon="tabler:shopping-cart" fontSize={23} />
                   {items === 0 ? null : <span className="position-absolute top-0 start-100 translate-middle badge rounded-circle  bg-black">
                     {items}
                   </span>}

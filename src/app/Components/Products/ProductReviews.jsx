@@ -8,8 +8,8 @@ const ProductReviews = () => {
     <>
       <div className="container my-lg-52 my-10">
         <div className="d-flex flex-wrap  justify-content-sm-between justify-content-center gap-sm-0 gap-2 align-items-center mb-54">
-        <h2 className='text-black fs-54 fw-bold letter text-center mb-0'>Customer Reviews</h2>
-        <button className='btn btn-primary rounded-0 py-3 px-10 fw-semibold  fs-5 '>Write A Review</button>
+        <h2 className='text-black fs-54 fw-bold letter text-center mb-0 text-uppercase'>Customer Reviews</h2>
+        <button className='btn btn-primary rounded-0 py-3 px-10 fw-semibold  fs-5 text-uppercase'>Write A Review</button>
         </div>
         <div className="row gy-4">
           <div className="col-lg-4 d-flex align-items-stretch ">
@@ -22,13 +22,13 @@ const ProductReviews = () => {
                 <Icon icon='material-symbols-light:star-outline' className='text-primary fs-54' />
                 <Icon icon='material-symbols-light:star-outline' className='text-primary fs-54' />
                </div>
-               <p className='fw-normal text-indigo fs-55 mb-0 lh-sm'>DailyObjects Legendary Logos Stride 2.0 Case Cover For</p>
+               <p className='fw-normal font-graphik text-indigo fs-55 mb-0 lh-sm'>DailyObjects Legendary Logos Stride 2.0 Case Cover For</p>
               </div>
             </div>
           </div>
           <div className="col-lg-4">
                <div className="bg-light-primary border border-b-2 border-white py-7 px-5 rounded-top-3">
-                <p className='mb-0 text-gray-emphasis fw-normal fs-5 lh-sm'>Lorem ipsum dolor sit amet consectetur. Urna pretium nullam id tincidunt iaculis enim augue mauris. Eget arcu habitant sed ut sed posuere ac. Habitant pulvinar fringilla tristique auctor laoreet. Sed ligula et feugiat hac sed orci id.</p>
+                <p className='mb-0 text-gray-emphasis fw-normal fs-5 lh-sm font-graphik'>Lorem ipsum dolor sit amet consectetur. Urna pretium nullam id tincidunt iaculis enim augue mauris. Eget arcu habitant sed ut sed posuere ac. Habitant pulvinar fringilla tristique auctor laoreet. Sed ligula et feugiat hac sed orci id.</p>
                </div>
                <div className="d-flex flex-wrap gap-sm-0 gap-3 py-13 px-5 bg-light-primary rounded-bottom-3 align-items-center align-items-center  justify-content-between  ">
                   <div className="d-flex align-items-center gap-2">
@@ -50,7 +50,7 @@ const ProductReviews = () => {
           </div>
           <div className="col-lg-4">
                <div className="bg-light-primary border border-b-2 border-white py-7 px-5 rounded-top-3">
-                <p className='mb-0 text-gray-emphasis fw-normal fs-5 lh-sm'>Lorem ipsum dolor sit amet consectetur. Urna pretium nullam id tincidunt iaculis enim augue mauris. Eget arcu habitant sed ut sed posuere ac. Habitant pulvinar fringilla tristique auctor laoreet. Sed ligula et feugiat hac sed orci id.</p>
+                <p className='mb-0 text-gray-emphasis fw-normal fs-5 lh-sm font-graphik'>Lorem ipsum dolor sit amet consectetur. Urna pretium nullam id tincidunt iaculis enim augue mauris. Eget arcu habitant sed ut sed posuere ac. Habitant pulvinar fringilla tristique auctor laoreet. Sed ligula et feugiat hac sed orci id.</p>
                </div>
                <div className="d-flex py-13 flex-wrap gap-sm-0 gap-3 px-5 bg-light-primary rounded-bottom-3 align-items-center align-items-center  justify-content-between  ">
                   <div className="d-flex align-items-center gap-2">

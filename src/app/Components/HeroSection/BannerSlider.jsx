@@ -41,12 +41,12 @@ const BannerSlide = () => {
                                         />
                                         <div className='position-absolute banner-text'>
                                             <p className='text-white fs-6 fw-bold pb-sm-2 pb-0 mb-sm-3 mb-0'>{bannerslider.subtitle}</p>
-                                            <h5 className='text-white fs-9 fw-bold pb-sm-2'>{bannerslider.title}</h5>
+                                            <h5 className='text-white fs-9 fw-bold pb-sm-2 text-uppercase'>{bannerslider.title}</h5>
                                             <div className='d-flex align-baseline lh-lg pb-sm-3'>
                                                 <span className='fs-5 fw-normal fw-normal text-white'>RS</span>
                                                 <h2 className='text-white fs-80 fw-bold mb-0'>{bannerslider.price}</h2>
                                             </div>
-                                            <Link className="btn btn-primary px-sm-10 py-2 mt-2" href={bannerslider.url} >Shop now
+                                            <Link className="btn btn-primary fw-semibold fs-81 text-uppercase px-4 py-51 mt-3 " href={bannerslider.url} >Shop now
                                                 </Link>  
                                         
                                         </div>

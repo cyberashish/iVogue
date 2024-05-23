@@ -6,7 +6,7 @@ const WhyBuy = () => {
         <>
             <div className='py-sm-12 py-7'>
                 <div className='container'>
-                    <h2 className='text-center fs-8 fw-semibold mb-5'>Why buy on the iVogue.</h2>
+                    <h2 className='text-center fs-8 fw-semibold mb-5 text-uppercase'>Why buy on the iVogue.</h2>
                     <div className='row' >
                     {Whybuydata.map((WhyBuy) => {
                       return (

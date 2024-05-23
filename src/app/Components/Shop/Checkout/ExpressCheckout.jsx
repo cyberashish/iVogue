@@ -15,7 +15,7 @@ const ExpressCheckout = () => {
               <div className="col-lg-8 mt-57">
                 <input
                   type="email"
-                  className="form-control fs-4 input-indication"
+                  className="form-control fw-medium fs-4 input-indication"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   placeholder="Email Address"
@@ -33,7 +33,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputfirstname1"
                     aria-describedby="firstnameHelp"
                     placeholder="First Name*"
@@ -42,7 +42,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputlastname1"
                     placeholder="Last Name*"
                   />
@@ -50,7 +50,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputnumber1"
                     placeholder="Number*"
                   />
@@ -58,7 +58,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputcompany"
                     placeholder="Company"
                   />
@@ -66,7 +66,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputaddress"
                     placeholder="Street address line 1*"
                   />
@@ -74,7 +74,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputaddress2"
                     placeholder="Street address line 2*"
                   />
@@ -106,7 +106,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputcity"
                     placeholder="City*"
                   />
@@ -114,7 +114,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="number"
-                    className="form-control fs-4 input-indication"
+                    className="form-control fw-medium fs-4 input-indication"
                     id="Inputcode"
                     placeholder="Zip/Postal Code*"
                   />
@@ -123,7 +123,7 @@ const ExpressCheckout = () => {
             </div>
           </form>
           <div className="d-flex flex-column my-8">
-            <h3 className="fs-8 text-black mb-3 ">Shipping Methods</h3>
+            <h3 className="fs-8 text-black mb-3 text-uppercase">Shipping Methods</h3>
             <div className="d-flex gap-54">
               <div className="d-flex align-items-center gap-1">
                 <div
@@ -142,13 +142,13 @@ const ExpressCheckout = () => {
             </div>
           </div>
           <div className="d-flex flex-column gap-4 mb-8">
-            <h3 className="fs-8 text-black lh-1 mb-0">Payment Method</h3>
+            <h3 className="fs-8 text-black lh-1 mb-0 text-uppercase">Payment Method</h3>
             <span className="fs-5 text-black fw-normal">
               Check / Money order
             </span>
           </div>
           <div className="d-flex flex-column gap-4 pb-14">
-            <h3 className="fs-8 text-black lh-1 mb-0">Billing Address</h3>
+            <h3 className="fs-8 text-black lh-1 mb-0 text-uppercase">Billing Address</h3>
             <div className="d-flex align-items-center gap-1">
               <div
                 className="wrap border border-2 p-0 border-subtle-dark d-flex justify-content-center align-align-items-center "

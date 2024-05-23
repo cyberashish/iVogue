@@ -51,7 +51,7 @@ const Accessories = () => {
     <>
       <div className="container">
         <div className="d-flex mb-53 gap-1 justify-content-center align-items-center">
-          <h1 className="fs-8 text-dark text-text-capitalize  text-center fw-bold mb-0">
+          <h1 className="fs-8 text-dark text-text-capitalize  text-center fw-bold mb-0 text-uppercase" >
             Add On Accessory: Phone Utility Lanyard
           </h1>
           <Icon icon="ep:info-filled" className="text-subtle-dark fs-5" />

@@ -1,3 +1,12 @@
+//Navigation
+
+.gift-wrapper{
+    transform: scale(0.23);
+    left: -76px;
+    top: -21px;
+}
+
+
 .hover-link {
     &:hover {
         color: var(--bs-primary) !important;
@@ -134,3 +143,136 @@ body,html {
 @media screen and (max-width:576px){
     
 }
+
+
+//Swiper-slide css
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .banner-swiper .swiper-button-prev{
+    width: 35px;
+    height: 35px;
+    background: #00000061;
+    border-radius: 50%;
+  }
+  .banner-swiper .swiper-button-next{
+    width: 35px;
+    height: 35px;
+    background: #00000061;
+    border-radius: 50%;
+  }
+
+  //dropdown
+  .dropdown-toggle::after{
+    content: none !important;
+  }
+  .header-menu{
+    top: 27px !important;
+    border: 0 !important;
+  }
+
+  .img-wrapper{
+    width: 142px;
+    height: 95px;
+  }
+  .gift-size{
+    transform: scale(0.38) !important;
+    top: -23px;
+    left: 44px;
+  }
+  .category-wrapper{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 35px 30px 18px;
+    background-color: #f6f9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        border-radius: 50%;
+    }
+  }
+
+  .brand-name.activeclr{
+    color: var(--bs-primary) !important;
+  }
+  .brand-identifier{
+    display: block;
+        li{
+            &:hover{
+                background-color: rgb(236, 236, 236);
+            }
+        }
+        &.active{
+            display: none;
+        }
+  }
+  .modelwrapper {
+    display: none;
+     &.activeModel{
+        display: block;
+     }
+  }
+
+  //header dropdown
+
+  .navigation-item{
+     cursor: pointer;
+     height: 80px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    &:hover{
+        .dropdown-menu{
+            position: absolute;
+            inset: 0px auto auto 0px;
+            margin: 0px;
+            transform: translate3d(0px, 94.4px, 0px);
+            display: block;
+        }
+        li{
+            a{
+                color: var(--bs-primary) !important;
+            }
+        }
+    }
+  }
+
+  .search-model-cases{
+    span{
+        cursor: pointer;
+        &:hover{
+            background-color: var(--bs-light-primary);
+        }
+    }
+  }
+
+  .search-bar{
+    .input-search{
+        &:focus{
+            border-color: var(--bs-primary) !important;
+        }
+      }
+  }

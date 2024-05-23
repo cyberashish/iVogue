@@ -53,8 +53,8 @@ const NewProducts = () => {
     <>
       <div className="container">
         <div className="d-flex mb-8 gap-1 justify-content-center align-items-center">
-          <h2 className="fs-8 text-dark  text-center fw-bold mb-0">
-            Recently Viewed
+          <h2 className="fs-8 text-dark text-uppercase text-center fw-bold mb-0">
+            New Arrivals
           </h2>
         </div>
         {/* Slider */}
