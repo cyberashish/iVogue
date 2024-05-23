@@ -70,8 +70,8 @@ const Header = () => {
                   if(nav_link.label==='GIFTING'){
                     return (
                      
-                        <div key={nav_link.key} className="dropdown navigation-item position-static" onClick={()=>router.push(`/${nav_link.href}`)}>
-                        <li className='fs-4 position-relative'>
+                        <div key={nav_link.key} className="dropdown navigation-item position-static" >
+                        <li className='fs-4 position-relative' onClick={()=>router.push(`/${nav_link.href}`)}>
                         <div  className={`text-decoration-none  fw-bold ${pathname.includes(nav_link.href) ? 'text-primary' : ''}`}>{nav_link.label}</div>
                         <Image src={gift} alt='image' className='position-absolute   gift-wrapper' />
                         </li>
@@ -82,8 +82,8 @@ const Header = () => {
                   }
                   else{
                     return (
-                      <div key={nav_link.key} className="dropdown navigation-item position-static" onClick={()=>router.push(`/${nav_link.href}`)}>
-                     <li className='fs-4 check-font position-relative' ><div  className={`text-decoration-none fw-bold ${pathname.includes(nav_link.href) ? 'text-primary' : ''}`}>{nav_link.label}</div></li>
+                      <div key={nav_link.key} className="dropdown navigation-item position-static" >
+                     <li className='fs-4 check-font position-relative' onClick={()=>router.push(`/${nav_link.href}`)} ><div  className={`text-decoration-none fw-bold ${pathname.includes(nav_link.href) ? 'text-primary' : ''}`}>{nav_link.label}</div></li>
                        {nav_link.dropContent}
                     </div>
                     )

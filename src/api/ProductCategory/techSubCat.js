@@ -14,17 +14,17 @@ import screenguardsImg from "/public/images/Tech_Category/new-screen-guards.webp
 
 export const TECH_SUB_CAT = [
     {key:"phone-covers",title:"PHONE CASES",img:phoneCaseImg,href:"/mobile-cases/brand-identifier"},
-    {key:"laptop-sleeves",title:"LAPTOP SLEEVES & BAGS",img:laptopCaseImg,href:"/"},
-    {key:"charging-solution",title:"CHARGING SOLUTIONS",img:ChargingImg,href:"/"},
-    {key:"watch-accessories",title:"WATCH ACCESSORIES",img:watchImg,href:"/"},
-    {key:"stand",title:"STANDS",img:standsImg,href:"/"},
-    {key:"organisers",title:"ORGANISERS",img:organisersImg,href:"/"},
-    {key:"phonelaneyards",title:"PHONE LANYARDS",img:phonelaneyardsImg,href:"/"},
-    {key:"phonebags",title:"PHONE BAGS",img:phonebagsImg,href:"/"},
-    {key:"cleaningKit",title:"CLEANING KIT",img:cleaningKitImg,href:"/"},
+    {key:"laptop-sleeves",title:"LAPTOP SLEEVES & BAGS",img:laptopCaseImg,href:"/mobile-cases/brand-identifier"},
+    {key:"charging-solution",title:"CHARGING SOLUTIONS",img:ChargingImg,href:"/mobile-cases/brand-identifier"},
+    {key:"watch-accessories",title:"WATCH ACCESSORIES",img:watchImg,href:"/mobile-cases/brand-identifier"},
+    {key:"stand",title:"STANDS",img:standsImg,href:"/mobile-cases/brand-identifier"},
+    {key:"organisers",title:"ORGANISERS",img:organisersImg,href:"/mobile-cases/brand-identifier"},
+    {key:"phonelaneyards",title:"PHONE LANYARDS",img:phonelaneyardsImg,href:"/mobile-cases/brand-identifier"},
+    {key:"phonebags",title:"PHONE BAGS",img:phonebagsImg,href:"/mobile-cases/brand-identifier"},
+    {key:"cleaningKit",title:"CLEANING KIT",img:cleaningKitImg,href:"/mobile-cases/brand-identifier"},
     {key:"airpodscases",title:"AIRPODS CASES",img:airpodscasesImg,href:"/mobile-cases/category/airpods-cover"},
-    {key:"ipadcases",title:"IPAD CASES",img:ipadcasesImg,href:"/"},
-    {key:"airtagcases",title:"AIRTAG CASES",img:airtagcasesImg,href:"/"},
+    {key:"ipadcases",title:"IPAD CASES",img:ipadcasesImg,href:"/mobile-cases/brand-identifier"},
+    {key:"airtagcases",title:"AIRTAG CASES",img:airtagcasesImg,href:"/mobile-cases/brand-identifier"},
     {key:"Screenguards",title:"SCREEN GUARDS",img:screenguardsImg,href:"/mobile-cases/category/tempered-glass"},
 ]
 
