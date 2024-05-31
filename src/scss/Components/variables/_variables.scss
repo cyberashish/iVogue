@@ -28,7 +28,6 @@ $cyan: #539BFF !default;
 // Main Colors
 $primary: #004FF2 !default;
 $secondary: #49BEFF !default;
-$indigo:$indigo !default;
 $purple:$purple !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -64,6 +63,10 @@ $grayextra:#94969F;
 $lightextra:#E0EAFD;
 $darkextra:#B7C0D2;
 $darkalpha:#000000de;
+$primary-variant:#99b3ff ;
+$bgfooter:#b1c3fb;
+$bodyclr:#909090;
+$body-variant:#f7f7f7;
 
 
 // Theme Colorss
@@ -99,8 +102,11 @@ $theme-colors: (
     'lightextra':$lightextra,
     'darkextra':$darkextra,
     'darkalpha':$darkalpha,
-    'bodyclr':#909090,
-    'bgfooter':#004adf,
+    'bodyclr':$bodyclr,
+    'bgfooter':$bgfooter,
+    'primary-variant':$primary-variant,
+    'body-variant':$body-variant
+
   ) !default;
 
 // Spacer
@@ -332,4 +338,7 @@ span{
 }
 .font-graphik{
   font-family: "Graphik Regular", sans-serif !important;
+}
+.font-graphik-md{
+  font-family: "Graphik Medium", sans-serif !important;
 }

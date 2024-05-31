@@ -15,7 +15,7 @@ const ExpressCheckout = () => {
               <div className="col-lg-8 mt-57">
                 <input
                   type="email"
-                  className="form-control fw-medium fs-4 input-indication"
+                  className="form-control express-input fw-medium fs-4 input-indication"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   placeholder="Email Address"
@@ -33,7 +33,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputfirstname1"
                     aria-describedby="firstnameHelp"
                     placeholder="First Name*"
@@ -42,7 +42,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputlastname1"
                     placeholder="Last Name*"
                   />
@@ -50,7 +50,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputnumber1"
                     placeholder="Number*"
                   />
@@ -58,7 +58,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputcompany"
                     placeholder="Company"
                   />
@@ -66,7 +66,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputaddress"
                     placeholder="Street address line 1*"
                   />
@@ -74,7 +74,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputaddress2"
                     placeholder="Street address line 2*"
                   />
@@ -106,7 +106,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="text"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputcity"
                     placeholder="City*"
                   />
@@ -114,7 +114,7 @@ const ExpressCheckout = () => {
                 <div className="col-12 col-md-6">
                   <input
                     type="number"
-                    className="form-control fw-medium fs-4 input-indication"
+                    className="form-control express-input fw-medium fs-4 input-indication"
                     id="Inputcode"
                     placeholder="Zip/Postal Code*"
                   />

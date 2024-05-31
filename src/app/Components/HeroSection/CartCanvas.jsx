@@ -55,7 +55,7 @@ const CartCanvas = () => {
         </SimpleBar>
       <div className="offcanvas-footer px-4">
         <div>
-          <button className="btn btn-outline-indigo px-8 py-55 lh-1 fs-3 border-2  w-100 fw-normal" onClick={() => {
+          <button className="btn btn-outline-indigo px-8 py-55 lh-1 fs-3 text-uppercase border-2  w-100 fw-normal" onClick={() => {
             if (items == 0) {
               toast.error("Your cart is empty!");
             }

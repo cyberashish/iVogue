@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import 'animate.css';
 
-const HeroSlider = ({title,img,animatecls}) => {
+
+const HeroSlider = ({title,img}) => {
   return (
     <>
-         <div className='bg-primary-subtle pt-9'>
+         <div className='bg-primary-subtle h-100 pt-9 hero-slider'>
         <div className='text-center '>
             <h1 className='fw-bolder fs-14 text-dark mb-0 lh-1 text-uppercase'>{title}</h1>
             <p className='fw-bolder fs-10 text-dark text-capitalize'>Cases Villa 360° Protection Case 9H </p>
@@ -12,9 +13,10 @@ const HeroSlider = ({title,img,animatecls}) => {
             <div className='d-flex justify-content-center'>
             <Image
                 src={img}
-                className={`${animatecls}`}
+                className='trial-slider'
                 alt="img"
                 style={{ width: "auto", height: "auto" }}
+                priority={true}
               />
             </div>
         </div>

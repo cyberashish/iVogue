@@ -4,22 +4,31 @@
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import { Icon } from "@iconify/react";
 
 const ProductCard = ({title,category,price,discountedPrice,thumbnail,image,discount,prodId,parenturl}) => {
   const router = useRouter();
-    const [frontimg,setFrontimg]=useState("");
-    const [backimg,setBackimg]=useState("d-none");
+  const [fillheart , setfillheart] = useState("");
+  const handlewishlist = () => {
+    if(fillheart===""){
+      setfillheart("teenyicons:heart-solid");
+    }
+    else{
+      setfillheart("");
+    }
+  }
   return (
     <>
       
-      <div className="col-xl-3 col-sm-6 col-lg-4" onClick={() => {router.push(`/mobile-cases/category/${parenturl}/${prodId}`)}}>
-        <div className="bg-light">
+      <div className="col-xl-3 col-sm-6 col-lg-4 col-6 position-relative product-card" >
+        <div className="bg-light" onClick={() => {router.push(`/mobile-cases/category/${parenturl}/${prodId}`)}}>
         <div
           className="group-img position-relative pointer w-100"
           
         >
           <Image
             src={thumbnail}
+            priority={true}
             alt="img"
             className={`w-100 mobile-cover-images front-img`}
             style={{
@@ -29,6 +38,7 @@ const ProductCard = ({title,category,price,discountedPrice,thumbnail,image,disco
           />
           <Image
             src={image}
+            priority={true}
             alt="img"
             className={`w-100 mobile-cover-images back-img `}
             style={{
@@ -59,6 +69,10 @@ const ProductCard = ({title,category,price,discountedPrice,thumbnail,image,disco
         </button>
          </div>
         </div>
+        <button className="heart-group position-absolute pointer bg-transparent border-0" style={{top:"19px",right:"23px"}} onClick={handlewishlist}>
+        <Icon icon='cil:heart' className="fs-55 text-primary position-absolute  top-0 end-0" />
+        <Icon icon={fillheart} className="fs-55 text-primary position-absolute  top-0 end-0" />
+        </button>
       </div>
     </>
   );

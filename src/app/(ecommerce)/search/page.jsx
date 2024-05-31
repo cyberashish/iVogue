@@ -11,10 +11,11 @@ const SearchBar = () => {
   const [searchItems , setSearchItems] = useState([]);
   const [filteredItems , setFilteredItems] = useState([]);
   const handleSearch = (e) => {
-    const searchData = e.target.value;
+    const searchData = e.target.value.toLowerCase();
     console.log(searchData);
     const filteredSearch = searchItems.filter((item)=>{
-         return item.modelName.toLowerCase().includes(searchData)
+         let counterText = item.modelName.toLowerCase();
+         return counterText.includes(searchData)
     });
     console.log(filteredSearch);
     setFilteredItems(filteredSearch);
@@ -29,7 +30,7 @@ const SearchBar = () => {
   },[])
   return (
     <>
-      <div className="container search-bar w-100 vh-100 d-flex justify-content-center align-items-start">
+      <div className="container search-bar w-100 vh-100 d-flex justify-content-center align-items-start mt-4">
           <div className="row justify-content-center w-100">
             <div className="col-lg-9">
             <input type="search" className="form-control input-search border-top-0 border-start-0 px-1 border-end-0 fw-normal py-2 fs-5 border-primary" id="exampleFormControlInput1 " onChange={handleSearch} placeholder="Search...." autoFocus/>

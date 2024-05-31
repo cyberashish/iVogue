@@ -7,12 +7,9 @@ import leather_img from "/public/images/leather_case.png";
 import hard_img from "/public/images/hard_case.png";
 import transparent_img from "/public/images/transparent_case.png";
 import phone_img from "/public/images/phone-cases.png";
-import MobileCoverCard from "@/app/Components/Products/Cards/ProductCard";
-import { PRODUCTS } from "@/api/Products/products";
 import { Icon } from "@iconify/react";
 import Newsletter from "@/app/Components/HeroSection/Newsletter";
 import CategoryItem from "@/app/Components/MobileCovers/CategoryItem";
-import FilterBlock from "@/app/Components/MobileCovers/FilterBlock";
 import CustomSkeleton from "@/app/Components/Skeleton/CustomSkeleton";
 import Pagination from "@/app/Components/Products/Pagination";
 import Link from "next/link";
@@ -150,7 +147,7 @@ const brandName = searchParams.get('brnd');
       <div className="container">
         <h2 className="fw-bold fs-8  text-center text-uppercase  my-md-11 mb-md-10 my-8 mb-6">{`${brandName} ${mobileModel} Covers & Cases`}</h2>
       </div>
-      <div className="d-flex gap-8 overflow-x-auto d-flex justify-content-md-center pb-md-11 pb-0 mb-sm-0 mb-8">
+      <div className="d-flex gap-8 overflow-x-auto d-flex justify-content-sm-center pb-md-11 pb-0 mb-sm-0 mb-8">
         <div
           className={`d-flex flex-column gap-6 covertype ${state.allCase}`}
           onClick={() => {
@@ -159,8 +156,7 @@ const brandName = searchParams.get('brnd');
           }}
         >
           <div
-            className={`d-flex justify-content-center align-items-center category  bg-indigo fs-4`}
-            style={{ width: "80px", height: "80px", borderRadius: "50%" }}
+            className={`d-flex justify-content-center align-items-center category round-80 rounded-circle  bg-indigo fs-4`}
           >
             <span className="text-center text-base fs-22 fw-bold text-white">
               ALL
@@ -213,12 +209,7 @@ const brandName = searchParams.get('brnd');
         >
           {mobileModel}
         </Link>
-        <div 
-data-bs-toggle="modal" data-bs-target="#exampleModal"
-          className="d-xl-none d-block"
-        >
-          <Icon icon="mingcute:filter-line" className="text-black fs-9" />
-        </div>
+
         <button
           onClick={() => {
             if (width === "") {
@@ -234,7 +225,7 @@ data-bs-toggle="modal" data-bs-target="#exampleModal"
         </button>
       </div>
 
-      <div className="w-100 px-7 d-flex">
+      <div className="w-100 px-md-7 px-2 d-flex">
         <div className={`row leftBox`}>
           <div className="col-xl-12">
             <div className="row gy-4">
@@ -261,7 +252,11 @@ data-bs-toggle="modal" data-bs-target="#exampleModal"
           </div>
         </div>
         <div className={`trial-box ${width}`}>
-          <ul className="nav filterable-tabs nav-pills mb-3" id="pills-tab" role="tablist">
+          <ul
+            className="nav filterable-tabs nav-pills mb-3"
+            id="pills-tab"
+            role="tablist"
+          >
             <li className="nav-item me-2" role="presentation">
               <button
                 className="nav-link active rounded-pill py-58 fs-3 text-uppercase filterTab"
@@ -301,26 +296,38 @@ data-bs-toggle="modal" data-bs-target="#exampleModal"
             >
               <div className="row justify-content-start">
                 <div className="col-lg-10">
-                <div className="row">
-                <h5 className="text-uppercase fs-6 mt-3">Collection</h5>
-               {FILTER_COLLECTION.map((item)=>{
-                return (
-                  <div className="col-lg-4 text-center filterTab-panel" key={item.key}>
-                    <Image alt="image" src={item.img} className="rounded-circle"/>
-                    <p className="fs-2 lh-1 mt-1">{item.title}</p>
+                  <div className="row">
+                    <h5 className="text-uppercase fs-6 mt-3">Collection</h5>
+                    {FILTER_COLLECTION.map((item) => {
+                      return (
+                        <div
+                          className="col-lg-4 text-center filterTab-panel"
+                          key={item.key}
+                        >
+                          <Image
+                            alt="image"
+                            src={item.img}
+                            className="rounded-circle"
+                          />
+                          <p className="fs-2 lh-1 mt-1">{item.title}</p>
+                        </div>
+                      );
+                    })}
+                    <h5 className="text-uppercase fs-6 mt-3">Color</h5>
+                    {FILTER_COLOR.map((item) => {
+                      return (
+                        <div
+                          className="col-lg-4 text-center filterTab-panel cursor"
+                          key={item.key}
+                        >
+                          <div
+                            className={`bg-${item.colorCode} rounded-circle round-60`}
+                          ></div>
+                          <p className="fs-2 lh-1 mt-1">{item.colorName}</p>
+                        </div>
+                      );
+                    })}
                   </div>
-                )
-               })}
-               <h5 className="text-uppercase fs-6 mt-3">Color</h5>
-               {FILTER_COLOR.map((item)=>{
-                return (
-                  <div className="col-lg-4 text-center filterTab-panel cursor"  key={item.key}>
-                     <div className={`bg-${item.colorCode} rounded-circle round-60`}></div>
-                    <p className="fs-2 lh-1 mt-1">{item.colorName}</p>
-                  </div>
-                )
-               })}
-             </div>
                 </div>
               </div>
             </div>
@@ -331,111 +338,167 @@ data-bs-toggle="modal" data-bs-target="#exampleModal"
               aria-labelledby="pills-profile-tab"
               tabIndex="0"
             >
-             <div className="d-flex flex-column gap-4 mt-4">
-               {FILTER_OPTIONS.map((elem)=>{
-                return (<Link href='#'  key={elem.key} className="fs-83 text-decoration-none">{elem.title}</Link>)
-               })}
-             </div>
+              <div className="d-flex flex-column gap-4 mt-4">
+                {FILTER_OPTIONS.map((elem) => {
+                  return (
+                    <Link
+                      href="#"
+                      key={elem.key}
+                      className="fs-83 text-decoration-none"
+                    >
+                      {elem.title}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </div>
       <Pagination />
-      <div className="mb-md-52 mb-10">
+      <div className="mb-md-52 mb-7">
         <Newsletter />
       </div>
 
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-header">
-      <h5 className="offcanvas-title fs-8" id="offcanvasExampleLabel">
-            IVogue
-          </h5>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      {/* Filter Products */}
+
+      <div
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        style={{width:"50px",height:"50px",bottom:"111px"}}
+        className="d-xl-none d-flex position-fixed border-2 shadow-emphasis start-50 z-5 rounded-circle bg-white border-primary border justify-content-center align-items-center" 
+      >
+        <Icon icon="mingcute:filter-line" className="text-black fs-9" />
       </div>
-      <div className="modal-body">
-      <ul className="nav filterable-tabs nav-pills mb-3" id="pills-tab-v2" role="tablist">
-            <li className="nav-item me-2" role="presentation">
+
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="offcanvas-title fs-8" id="offcanvasExampleLabel">
+                IVogue
+              </h5>
               <button
-                className="nav-link active rounded-pill py-58 fs-3 text-uppercase filterTab"
-                id="pills-home-tab-v2"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-home-v2"
                 type="button"
-                role="tab"
-                aria-controls="pills-home"
-                aria-selected="true"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <ul
+                className="nav filterable-tabs nav-pills mb-3"
+                id="pills-tab-v2"
+                role="tablist"
               >
-                FILTER
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link rounded-pill py-58 fs-3 text-uppercase text-white filterTab"
-                id="pills-profile-tab-v2"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-profile-v2"
-                type="button"
-                role="tab"
-                aria-controls="pills-profile"
-                aria-selected="false"
-              >
-                SORT
-              </button>
-            </li>
-          </ul>
-      <div className="tab-content" id="pills-tabContent">
-            <div
-              className="tab-pane fade show active"
-              id="pills-home-v2"
-              role="tabpanel"
-              aria-labelledby="pills-home-tab-v2"
-              tabIndex="0"
-            >
-              <div className="row justify-content-start">
-                <div className="col-lg-10">
-                <div className="row">
-                <h5 className="text-uppercase fs-6 mt-3">Collections</h5>
-               {FILTER_COLLECTION.map((item)=>{
-                return (
-                  <div className="col-4 text-center filterTab-panel" key={item.key}>
-                    <Image alt="image" src={item.img} className="rounded-circle"/>
-                    <p className="fs-2 lh-1 mt-1">{item.title}</p>
+                <li className="nav-item me-2" role="presentation">
+                  <button
+                    className="nav-link active rounded-pill py-58 fs-3 text-uppercase filterTab"
+                    id="pills-home-tab-v2"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-home-v2"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home"
+                    aria-selected="true"
+                  >
+                    FILTER
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link rounded-pill py-58 fs-3 text-uppercase text-white filterTab"
+                    id="pills-profile-tab-v2"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile-v2"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    SORT
+                  </button>
+                </li>
+              </ul>
+              <div className="tab-content" id="pills-tabContent">
+                <div
+                  className="tab-pane fade show active"
+                  id="pills-home-v2"
+                  role="tabpanel"
+                  aria-labelledby="pills-home-tab-v2"
+                  tabIndex="0"
+                >
+                  <div className="row justify-content-start">
+                    <div className="col-lg-10">
+                      <div className="row">
+                        <h5 className="text-uppercase fs-6 mt-3">
+                          Collections
+                        </h5>
+                        {FILTER_COLLECTION.map((item) => {
+                          return (
+                            <div
+                              className="col-4 text-center filterTab-panel"
+                              key={item.key}
+                            >
+                              <Image
+                                alt="image"
+                                src={item.img}
+                                className="rounded-circle"
+                              />
+                              <p className="fs-2 lh-1 mt-1">{item.title}</p>
+                            </div>
+                          );
+                        })}
+                        <h5 className="text-uppercase fs-6 mt-3">Color</h5>
+                        {FILTER_COLOR.map((item) => {
+                          return (
+                            <div
+                              className="col-4 text-center filterTab-panel cursor"
+                              key={item.key}
+                            >
+                              <div
+                                className={`bg-${item.colorCode} rounded-circle round-60 mx-auto`}
+                              ></div>
+                              <p className="fs-2 lh-1 mt-1">{item.colorName}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                )
-               })}
-               <h5 className="text-uppercase fs-6 mt-3">Color</h5>
-               {FILTER_COLOR.map((item)=>{
-                return (
-                  <div className="col-4 text-center filterTab-panel cursor"  key={item.key}>
-                     <div className={`bg-${item.colorCode} rounded-circle round-60 mx-auto`}></div>
-                    <p className="fs-2 lh-1 mt-1">{item.colorName}</p>
+                </div>
+                <div
+                  className="tab-pane fade"
+                  id="pills-profile-v2"
+                  role="tabpanel"
+                  aria-labelledby="pills-profile-tab-v2"
+                  tabIndex="0"
+                >
+                  <div className="d-flex flex-column gap-4 mt-4">
+                    {FILTER_OPTIONS.map((elem) => {
+                      return (
+                        <Link
+                          href="/"
+                          key={elem.key}
+                          className="fs-83 text-decoration-none"
+                        >
+                          {elem.title}
+                        </Link>
+                      );
+                    })}
                   </div>
-                )
-               })}
-             </div>
                 </div>
               </div>
             </div>
-            <div
-              className="tab-pane fade"
-              id="pills-profile-v2"
-              role="tabpanel"
-              aria-labelledby="pills-profile-tab-v2"
-              tabIndex="0"
-            >
-             <div className="d-flex flex-column gap-4 mt-4">
-               {FILTER_OPTIONS.map((elem)=>{
-                return (<Link href='/'  key={elem.key} className="fs-83 text-decoration-none">{elem.title}</Link>)
-               })}
-             </div>
-            </div>
           </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
     </>
   );
 };

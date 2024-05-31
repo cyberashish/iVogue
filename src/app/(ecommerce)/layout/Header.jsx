@@ -30,9 +30,6 @@ const Header = () => {
               <Link href={"#menucanvasExample"} className="d-xl-none d-flex text-darkalpha" data-bs-toggle="offcanvas"  role="button" aria-controls="menucanvasExample">
                 <Icon icon="tabler:menu-2" fontSize={25} />
               </Link>
-              <Link href={"#"} className="d-xl-none d-flex text-darkalpha" data-bs-toggle="modal" data-bs-target="#searchModal">
-                <Icon icon="tabler:search" fontSize={25} />
-              </Link>
             </div>
             <Link href={'/'}><Image src={logo} alt='image' className='logo' style={{transform:"scale(0.7)"}} /></Link>
 
@@ -48,7 +45,7 @@ const Header = () => {
                 <ul className='list-unstyled mb-0 ms-auto'>
                   {NAV_LINKS.map((nav_link) => {
                     return (
-                      <li key={nav_link.key} className=' mb-8' ><Link href={`/${nav_link.href}`}  className={`text-decoration-none fs-56 fw-semibold ${pathname.includes(nav_link.href) ? 'text-warning' : ''}`}>{nav_link.label}</Link></li>
+                      <li key={nav_link.key} className=' mb-8' data-bs-dismiss="offcanvas"><Link href={`/${nav_link.href}`}  className={`text-decoration-none fs-56 fw-semibold ${pathname.includes(nav_link.href) ? 'text-warning' : ''}`}>{nav_link.label}</Link></li>
                     )
                   })}
                 </ul>
@@ -91,23 +88,9 @@ const Header = () => {
               })}
             </ul>
             <div className="d-flex align-items-center ms-xl-auto gap-5">
-              <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-                <div className="modal-dialog  m-0 max-w-100 modal-xl">
-                  <div className="modal-content rounded-0">
-                    <div className="modal-body">
-                      <form className='ps-2 border border-light-gray rounded-2 position-relative d-flex align-items-center'>
-                        <Icon icon='bitcoin-icons:search-outline' className='text-muted fs-8' />
-                        <input type="search" className="form-control ps-2 py-2 fw-light fs-4 border-0 shadow-none " id="exampleFormControlInput1" placeholder="Search for Products, brands and more..." />
-                      </form>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-
+ 
               <div className="d-flex gap-13">
-                <Link href="/" className='text-darkscale-variant hover-link'><Icon icon="tabler:user" fontSize={23} /></Link>
+                <Link href="/acco-struc" className='text-darkscale-variant hover-link'><Icon icon="tabler:user" fontSize={23} /></Link>
                 <Link href='/search' className=" text-darkscale-variant" >
                 <Icon icon="tabler:search" fontSize={23} />
               </Link>

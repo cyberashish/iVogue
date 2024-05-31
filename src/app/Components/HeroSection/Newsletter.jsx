@@ -4,7 +4,7 @@ import img1 from "/public/images/homepage/label.svg";
 const Newsletter = () => {
     return (
         <>
-            <div className='container mb-lg-20 mb-sm-10 mb-7'>
+            <div className='container mb-lg-20 mb-sm-10 my-7'>
                 <div className='bg-primary-subtle py-sm-12 py-8'>
                     <div className='row justify-content-center'>
                         <div className='col-md-8'>

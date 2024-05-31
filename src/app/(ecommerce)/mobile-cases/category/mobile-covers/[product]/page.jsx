@@ -1,8 +1,6 @@
 "use client"
 import SelectedProduct from "@/app/Components/Products/SelectedProduct";
-import ProductDetail from "@/app/Components/Products/ProductDetail";
 import { useEffect, useState } from "react";
-import { PRODUCTS } from "@/api/Products/products";
 import CustomSkeleton from "@/app/Components/Skeleton/CustomSkeleton";
 import { useProduct } from "@/store/CartProvider/CartData";
 
@@ -21,8 +19,9 @@ const MobileCover = ({params}) => {
     },[])
   return (
     <>
+    <div className="container">
       {sliderData.length===0?<CustomSkeleton/>:<SelectedProduct Id={params.product} data={sliderData[0]}/>}
-      <ProductDetail/>
+      </div>
     </>
   );
 };
