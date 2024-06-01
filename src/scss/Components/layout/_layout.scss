@@ -608,6 +608,9 @@ margin: 1px;
 
 .account-sidebar{
   width: 350px;
+  @media only screen and (max-width:992px){
+    width: 0;
+  }
 }
 .account-pageContainer{
   width: calc(100% - 350px);

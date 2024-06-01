@@ -23,3 +23,10 @@
         }
     }
 }
+
+.account-wrapper{
+    opacity: 0;
+    @media only screen and (max-width:500px){
+        opacity: 1;
+    }
+}
