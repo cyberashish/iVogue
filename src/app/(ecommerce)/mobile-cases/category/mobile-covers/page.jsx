@@ -145,7 +145,7 @@ const brandName = searchParams.get('brnd');
     <>
       <CoverHeader />
       <div className="container">
-        <h2 className="fw-bold fs-8  text-center text-uppercase  my-md-11 mb-md-10 my-8 mb-6">{`${brandName} ${mobileModel} Covers & Cases`}</h2>
+        <h2 className="fw-bold fs-8  text-center text-uppercase  my-md-11 mb-md-10 my-8 mb-6">{` ${mobileModel} Covers & Cases`}</h2>
       </div>
       <div className="d-flex gap-8 overflow-x-auto d-flex justify-content-sm-center pb-md-11 pb-0 mb-sm-0 mb-8">
         <div
